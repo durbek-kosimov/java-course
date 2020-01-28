@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class ValidatedInvoiceApp {
 
+    public static final String ENTER_CUSTOMER_TYPE_R_C_T = "Enter customer type: (r/c/t): ";
+
     public static void main(String[] args) {
         System.out.println("Welcome to the Invoice Total Calculator");
         System.out.println();
@@ -13,7 +15,7 @@ public class ValidatedInvoiceApp {
             Scanner sc = new Scanner(System.in);
             sc.useLocale(Locale.ENGLISH);
 
-            System.out.println("Enter customer type: (r/c/t): ");
+            System.out.println(ENTER_CUSTOMER_TYPE_R_C_T);
             String customerType = getValidCustomerType(sc);
 
             System.out.print("Enter subtotal: ");
@@ -74,7 +76,7 @@ public class ValidatedInvoiceApp {
                 isValid = true;
             else {
                 System.out.println("Error! Invalid token. Try again.");
-                System.out.println("Enter customer type: (r/c/t): ");
+                System.out.println(ENTER_CUSTOMER_TYPE_R_C_T);
                 sc.nextLine();
                 continue;
             }
