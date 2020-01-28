@@ -15,8 +15,8 @@ public class test {
 //        Scanner scanner = new Scanner(System.in);
 //        scanner.useLocale(Locale.ENGLISH);
 //
-//        Date now = new Date();
-//        String currentDate = now.toString();
+        Date now = new Date();
+        String currentDate = now.toString();
 
 //        test t = new test();
 //
@@ -31,8 +31,8 @@ public class test {
 //        int quan = scanner.nextInt();
 
 //        System.out.println(pcode + " "+ price +" " + quan);
-//        System.out.println("The time now is: " + now);
-//        System.out.println("The current time is: " + currentDate);
+        System.out.println("The time now is: " + now);
+        System.out.println("The current time is: " + currentDate);
         schijven();
 //        t.nogSchrijven();
         String str = "abc";
