@@ -35,9 +35,9 @@ public class test {
         System.out.println("The current time is: " + currentDate);
         schijven();
 //        t.nogSchrijven();
-        String str = "abc";
+        String str = "abcdefgh";
         String cde = "cde";
-        System.out.println("abc".substring(2,3));
+        System.out.println("abcdefgh".substring(2,4));
         System.out.println(cde.substring(1,2));
     }
 
