@@ -65,7 +65,6 @@ public class ValidatedInvoiceApp {
         return discountPercent;
     }
 
-
     public static String getValidCustomerType(Scanner sc) {
         String s = "";
         boolean isValid = false;
