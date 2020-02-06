@@ -2,7 +2,7 @@ import java.text.NumberFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class ExceptionTryFutureValueApp {
+public class FutureValueExceptionApp {
     public static void main(String[] args) {
         System.out.println("Welcome to the Future Value Calculator\n");
         Scanner sc = new Scanner(System.in);

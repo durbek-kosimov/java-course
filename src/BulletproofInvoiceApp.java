@@ -28,8 +28,8 @@ public class BulletproofInvoiceApp {
             NumberFormat percent = NumberFormat.getPercentInstance();
 
             String message = "Discount percent: " + percent.format(discountPercent) + "\n"
-                    + "Discount amount: " + currency.format(discountAmount) + "\n"
-                    + "Invoice total: " + currency.format(invoiceTotal) + "\n";
+                           + "Discount amount: " + currency.format(discountAmount) + "\n"
+                           + "Invoice total: " + currency.format(invoiceTotal) + "\n";
 
             System.out.println(message);
 
@@ -96,6 +96,10 @@ public class BulletproofInvoiceApp {
                     continue;
                 }
                 isValid = true;
+            }
+            else {
+                sc.nextLine();
+                System.out.println("Error! Invalid entry. Try again.");
             }
         }
         return st;

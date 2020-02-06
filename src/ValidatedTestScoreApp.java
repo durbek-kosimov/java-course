@@ -46,6 +46,8 @@ public class ValidatedTestScoreApp {
                 maximum = 0;
                 minimum = 1000;
             }
+            sc.nextLine();
+            System.out.println();
         } while(!choise.equalsIgnoreCase("n"));
     }
 
