@@ -23,7 +23,11 @@ public class ProductDB {
         } else if (productCode.equalsIgnoreCase("mysql")) {
             product.setDescription("Murach's MySQL");
             product.setPrice(54.50);
-        } else {
+        } else if (productCode.equalsIgnoreCase("txtp")) {
+            product.setDescription("TextPad");
+            product.setPrice(20.0);
+        }
+        else {
             product.setDescription("Unknown");
         }
         return product;

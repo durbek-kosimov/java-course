@@ -5,7 +5,7 @@ public class Product {
     private String description;
     private double price;
 
-    private static int objectCount = 0;
+//    private static int objectCount = 0;
 
     public Product() {
         code = "";
@@ -57,13 +57,13 @@ public class Product {
         this.price = price;
     }
 
-    public static void setObjectCount(int objectCount) {
-        Product.objectCount = objectCount;
-    }
+//    public static void setObjectCount(int objectCount) {
+//        Product.objectCount = objectCount;
+//    }
 
-    public static int getObjectCount() {
-        return objectCount;
-    }
+//    public static int getObjectCount() {
+//        return objectCount;
+//    }
 
     public String getFormattedPrice() {
         NumberFormat currency = NumberFormat.getCurrencyInstance();

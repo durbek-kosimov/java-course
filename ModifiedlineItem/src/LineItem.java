@@ -5,15 +5,23 @@ public class LineItem {
     private int quantity;
     private double total;
 
+    private static int objectCount = 0;
+
     public LineItem() {
-//        this.product = new Product();
-        this.product = null;
+        this.product = new Product();
+//        product = null;
+//        quantity = 0;
+//        total = 0;
+//        objectCount ++;
+//        this.product = null;
         this.quantity = 0;
         this.total = 0;
+        this.objectCount ++;
     }
     public LineItem(Product product, int quantity) {
         this.product = product;
         this.quantity = quantity;
+        this.setObjectCount(objectCount);
     }
 
     public void setProduct(Product product) {
@@ -43,5 +51,13 @@ public class LineItem {
     public String getFormattedTotal() {
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         return currency.format(this.getTotal());
+    }
+
+    public void setObjectCount(int objectCount) {
+        LineItem.objectCount = objectCount;
+    }
+
+    public int getObjectCount() {
+        return objectCount ++;
     }
 }
