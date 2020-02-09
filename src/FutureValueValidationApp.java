@@ -1,7 +1,7 @@
 import java.text.NumberFormat;
 import java.util.Scanner;
 
-public class ValidatedFutureValueApp {
+public class FutureValueValidationApp {
     public static void main(String[] args) {
         System.out.println("Welcome to the Future Value Calculator\n");
         Scanner sc = new Scanner(System.in);
