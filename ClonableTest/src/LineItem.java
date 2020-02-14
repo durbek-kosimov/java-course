@@ -1,6 +1,6 @@
 import java.text.NumberFormat;
 
-public class LineItem {
+public class LineItem implements Cloneable {
     private Product product;
     private int quantity;
     private double total;
@@ -54,5 +54,10 @@ public class LineItem {
                         "Price: " + product.getFormattedPrice() + "\n" +
                         "Quantity: " + quantity + "\n" +
                         "Total: " + this.getFormattedTotal() + "\n";
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
