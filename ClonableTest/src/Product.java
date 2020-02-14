@@ -1,6 +1,6 @@
 import java.text.NumberFormat;
 
-public class Product {
+public class Product implements Cloneable {
     private String code;
     private String description;
     private double price;
@@ -51,5 +51,10 @@ public class Product {
         return "Code:        " + code + "\n" +
                 "Description: " + description + "\n" +
                 "Price:       " + this.getFormattedPrice() + "\n";
+    }
+
+    @Override
+    protected Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
