@@ -1,3 +1,4 @@
+//public final class Book extends Product {
 public class Book extends Product {
     private String author;
 
@@ -15,8 +16,14 @@ public class Book extends Product {
         this.author = author;
     }
 
-    @Override
-    public String toString() {
+//    @Override
+//    public String toString() {
+//        return super.toString() + "Author:      " + author + "\n";
+//    }
+    public String getDisplayText() {
         return super.toString() + "Author:      " + author + "\n";
     }
+//    public final String getDisplayText() {
+//        return super.toString() + "Author:      " + author + "\n";
+//    }
 }

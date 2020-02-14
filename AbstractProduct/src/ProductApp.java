@@ -13,7 +13,8 @@ public class ProductApp {
             Product p = ProductDB.getProduct(productCode);
             System.out.println();
             if (p != null)
-                System.out.println(p);
+//                System.out.println(p);
+                System.out.println(p.getDisplayText());
             else
                 System.out.println("No product matches this product code.");
 

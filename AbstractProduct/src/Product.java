@@ -12,6 +12,8 @@ public abstract class Product {
         price = 0;
     }
 
+    public abstract String getDisplayText();
+
     public String getCode() {
         return code;
     }
