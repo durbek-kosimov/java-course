@@ -40,10 +40,6 @@ public class FutureValueApp {
             // increment the row counter
             row++;
 
-//            System.out.println();
-//            System.out.println("FORMATTED RESULTS");
-//            System.out.println(results);
-
             System.out.println("continue? (y/n): ");
             choice = sc.next();
             sc.nextLine();
