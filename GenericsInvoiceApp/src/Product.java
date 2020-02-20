@@ -34,6 +34,7 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+
     public String getFormattedPrice() {
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         return currency.format(price);

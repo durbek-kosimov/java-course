@@ -33,6 +33,7 @@ public class LineItem {
     }
 
     public double getTotal() {
+        this.calculateTotal();
         return total;
     }
 
@@ -42,6 +43,7 @@ public class LineItem {
     public void calculateTotal() {
         total = quantity * product.getPrice();
     }
+
     public String getFormattedTotal() {
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         return currency.format(this.getTotal());
