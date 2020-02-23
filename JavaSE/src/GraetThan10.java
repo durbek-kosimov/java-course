@@ -2,7 +2,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Set;
 
-public class GraetThan20 {
+public class GraetThan10 {
     public static Set<Integer> createSet() {
         // напишите тут ваш код
         Set<Integer> set = new HashSet<Integer>();
