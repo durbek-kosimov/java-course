@@ -4,7 +4,7 @@ import java.text.*;
 public class FutureValueApp {
 
     public static void main(String[] args) {
-        ArrayList<String> calculations = new ArrayList<String>();
+        LinkedList<String> calculations = new LinkedList<>();
 
         // display a welcome message
         System.out.println("Welcome to the Future Value Calculator");
@@ -66,9 +66,8 @@ public class FutureValueApp {
         System.out.println("Future Value Calculations");
         System.out.println();
         System.out.println("Inv/Mo.\t\tRate\tYears\tFuture Value");
-        for (int i = 0; i < calculations.size(); i ++)
-//        while (calculations.size() > 0)
-            System.out.println(calculations.get(i));
+        while (calculations.size() > 0)
+            System.out.println(calculations.removeLast());
         System.out.println();
     }
 
