@@ -8,7 +8,7 @@ public class Invoice {
 
     public Invoice() {
         lineItems = new ArrayList<LineItem>();
-        invoiceDate = DateUtils.get
+//        invoiceDate = DateUtils.get
     }
     public void addItem(LineItem lineItem) {
         this.lineItems.add(lineItem);
