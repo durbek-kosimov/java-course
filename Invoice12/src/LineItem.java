@@ -1,4 +1,6 @@
+import java.text.FieldPosition;
 import java.text.NumberFormat;
+import java.text.ParsePosition;
 
 public class LineItem {
     private Product product;
@@ -47,5 +49,10 @@ public class LineItem {
     public String getFormattedTotal() {
         NumberFormat currency = NumberFormat.getCurrencyInstance();
         return currency.format(this.getTotal());
+    }
+    public String getFormattedQuantity() {
+        NumberFormat number = NumberFormat.getNumberInstance();
+        return number.format(quantity);
+
     }
 }
