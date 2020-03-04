@@ -22,17 +22,6 @@ public class InvoiceApp {
             System.out.println();
         }
     }
-//    public static void displayInvoice() {
-//        System.out.println("Code\tDescription\t\t\tPrice\tQty\tTotal");
-//        System.out.println("----\t-----------\t\t\t-----\t---\t-----");
-//        for (LineItem lineItem : invoice.getLineItems()) {
-//            Product product = lineItem.getProduct();
-//            String s = product.getCode() + "\t" + product.getDescription() + "\t" + product.getFormattedPrice()
-//                                         + "\t" + lineItem.getQuantity() + "\t" + lineItem.getFormattedTotal();
-//            System.out.println(s);
-//        }
-//        System.out.println("\n\t\t\t\t\tInvoice total:\t" + invoice.getFormattedTotal() + "\n");
-//    }
     public static void displayInvoice() {
         StringBuilder sb = new StringBuilder();
         sb.append("Invoice date: ");
