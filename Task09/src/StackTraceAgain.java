@@ -1,4 +1,4 @@
-public class StackTrace {
+public class StackTraceAgain {
     public static void main(String[] args) {
         method1();
     }
