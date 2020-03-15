@@ -1,4 +1,4 @@
-public class CoversionOfIntegers5 {
+public class ConversionOfIntegers5 {
     public static void main(String[] args) {
         int a = (byte) 44;
         int b = 300;
