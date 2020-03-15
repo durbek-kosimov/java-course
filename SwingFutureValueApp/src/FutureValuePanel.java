@@ -9,12 +9,12 @@ public class FutureValuePanel extends JPanel implements ActionListener {
             rateTextField,
             yearsTextField,
             futureValueTextField;
-    private JLabel     paymentLabel,
-            rateLabel,
-            yearsLabel,
-            futureValueLabel;
-    private JButton    calculateButton,
-            exitButton;
+    private JLabel paymentLabel,
+                   rateLabel,
+                   yearsLabel,
+                   futureValueLabel;
+    private JButton calculateButton,
+                    exitButton;
 
     public FutureValuePanel() {
 //        displayPanel
@@ -22,35 +22,35 @@ public class FutureValuePanel extends JPanel implements ActionListener {
         displayPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 
 //        payment label
-        paymentLabel = new JLabel("Monthly Payment");
+        JLabel paymentLabel = new JLabel("Monthly Payment:");
         displayPanel.add(paymentLabel);
 
 //        payment label
-        paymentTextField = new JTextField(10);
+        JTextField paymentTextField = new JTextField(10);
         displayPanel.add(paymentTextField);
 
 //        rate label
-        rateLabel = new JLabel("Yearly interest rate");
+        JLabel rateLabel = new JLabel("Yearly Interest Rate:");
         displayPanel.add(rateLabel);
 
 //        rate text field
-        rateTextField = new JTextField(10);
+        JTextField rateTextField = new JTextField(10);
         displayPanel.add(rateTextField);
 
 //        years label
-        yearsLabel = new JLabel("Number of Years");
-        displayPanel.add(yearsTextField);
+        JLabel yearsLabel = new JLabel("Number of Years:");
+        displayPanel.add(yearsLabel);
 
 //        years text field
-        yearsTextField = new JTextField(10);
+        JTextField yearsTextField = new JTextField(10);
         displayPanel.add(yearsTextField);
 
 //        future value label
-        futureValueLabel = new JLabel("Future Value");
+        JLabel futureValueLabel = new JLabel("Future Value");
         displayPanel.add(futureValueLabel);
 
 //        future value text field
-        futureValueTextField = new JTextField(10);
+        JTextField futureValueTextField = new JTextField(10);
         futureValueTextField.setEditable(false);
         futureValueTextField.setFocusable(false);
         displayPanel.add(futureValueTextField);
@@ -60,12 +60,12 @@ public class FutureValuePanel extends JPanel implements ActionListener {
         buttonPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 
 //        calculate buttons
-        calculateButton = new JButton("Calculate");
+        JButton calculateButton = new JButton("Calculate");
         calculateButton.addActionListener(this);
         buttonPanel.add(calculateButton);
 
 //        exit button
-        exitButton = new JButton("Exit");
+        JButton exitButton = new JButton("Exit");
         exitButton.addActionListener(this);
         buttonPanel.add(exitButton);
 
@@ -80,12 +80,10 @@ public class FutureValuePanel extends JPanel implements ActionListener {
         if (source == exitButton)
             System.exit(0);
         else if (source == calculateButton) {
-            double payment =
-                    Double.parseDouble(paymentTextField.getText());
+            double payment = Double.parseDouble(paymentTextField.getText());
             double rate = Double.parseDouble(rateTextField.getText());
             int years = Integer.parseInt(yearsTextField.getText());
-            double futureValue =
-                    FinancialCalculations.calculateFutureValue(payment, rate, years);
+            double futureValue = FinancialCalculations.calculateFutureValue(payment, rate, years);
             NumberFormat currency = NumberFormat.getCurrencyInstance();
             futureValueTextField.setText(currency.format(futureValue));
         }

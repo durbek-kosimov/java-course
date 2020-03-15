@@ -8,5 +8,4 @@ public class FinancialCalculations {
             futureValue = (futureValue + monthlyPayment) * (1 + monthlyInterestRate);
         return futureValue;
     }
-
 }
