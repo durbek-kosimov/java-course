@@ -1,4 +1,4 @@
-public class FromPupilToHighQualificatedSlave {
+public class FromPupilToHighQualifiedSlave {
     public static void main(String[] args) {
     }
 
