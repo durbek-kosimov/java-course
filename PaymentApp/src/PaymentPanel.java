@@ -26,7 +26,7 @@ public class PaymentPanel extends JPanel implements ActionListener {
         creditCardRadioButton = new JRadioButton("Credit card", true);
         creditCardRadioButton.addActionListener(this);
         billingGroup.add(creditCardRadioButton);
-        radioPanel.add(billCustomerRadioButton);
+        radioPanel.add(creditCardRadioButton);
 
         add(radioPanel, getConstraints(0, 0, 3, 1, GridBagConstraints.WEST));
 
