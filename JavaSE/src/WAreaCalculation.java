@@ -30,7 +30,7 @@ public class WAreaCalculation extends JFrame implements ActionListener {
         length = 20;
         width = 10;
         area = length * width;
-        JOptionPane.showMessageDialog(null, "Area is: " + area);
+        JOptionPane.showMessageDialog(null, "AreaCalculation is: " + area);
     }
 }
 
