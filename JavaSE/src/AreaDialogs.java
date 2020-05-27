@@ -30,10 +30,13 @@ public class AreaDialogs extends JFrame implements ActionListener {
         int width;
         String lengthString;
         String widthString;
+
         lengthString = JOptionPane.showInputDialog("Length:");
         length = Integer.parseInt(lengthString);
+
         widthString = JOptionPane.showInputDialog("Width:");
         width = Integer.parseInt(widthString);
+
         area = length * width;
         JOptionPane.showMessageDialog(null, "Area is: " + area);
     }
