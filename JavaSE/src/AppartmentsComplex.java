@@ -14,7 +14,7 @@ public class AppartmentsComplex extends JFrame implements ChangeListener {
 
     public static void main(String[] args) {
         AppartmentsComplex demo = new AppartmentsComplex();
-        demo.setSize(500,500);
+        demo.setSize(380,380);
         demo.createGUI();
         demo.setVisible(true);
     }
@@ -28,14 +28,14 @@ public class AppartmentsComplex extends JFrame implements ChangeListener {
         window.add(slider1);
         slider1.addChangeListener(this);
 
-        slider2 = new JSlider(JSlider.VERTICAL, min, max, intr);
-        window.add(slider2);
-        slider2.addChangeListener(this);
-
         panel = new JPanel();
         panel.setPreferredSize(new Dimension(300, 250));
         panel.setBackground(Color.white);
         window.add(panel);
+
+        slider2 = new JSlider(JSlider.VERTICAL, min, max, intr);
+        window.add(slider2);
+        slider2.addChangeListener(this);
     }
 
     @Override
