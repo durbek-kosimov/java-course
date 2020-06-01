@@ -38,6 +38,7 @@ public class DrawExample extends JFrame implements ActionListener {
 //        paper.drawOval(0,0, 20, 20);
 //        paper.setColor(Color.white);
 //        for (int count = 0; count < 20; count ++) {
+
         int x, y, radius, numberOfBars, counter;
         numberOfBars = 5;
         x = 10;
