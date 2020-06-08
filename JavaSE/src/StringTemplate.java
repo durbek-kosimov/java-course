@@ -3,7 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class StringTemplate extends JFrame implements ActionListener {
-    private JTextField string1Field, getString2Field, resultField;
+    private JTextField string1Field, string2Field, resultField;
     private JLabel string1Label, string2Label, resultLabel;
     private JButton goButton;
 
@@ -27,5 +27,18 @@ public class StringTemplate extends JFrame implements ActionListener {
 
         string2Label = new JLabel("Type string2: ");
         window.add(string2Label);
+
+        string2Field = new JTextField(20);
+        window.add(string2Field);
+
+        resultLabel = new JLabel("result is: ");
+        window.add(resultLabel);
+
+        resultField = new JTextField(20);
+        window.add(resultField);
+
+        goButton = new JButton("do it");
+        window.add(goButton);
+        goButton.addActionListener(this);
     }
 }
