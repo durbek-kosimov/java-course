@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class StringTemplate extends JFrame implements ActionListener {
@@ -40,5 +41,20 @@ public class StringTemplate extends JFrame implements ActionListener {
         goButton = new JButton("do it");
         window.add(goButton);
         goButton.addActionListener(this);
+    }
+
+    public void actionPerformed(ActionEvent event) {
+        String result = "";
+        if (event.getSource() == goButton) {
+            String string1 = string1Field.getText();
+            String string2 = string2Field.getText();
+//
+//
+            if (string1.equals(string2))
+                result = "They are equal.";
+            else
+                result = "They are not equal.";
+            resultField.setText(result);
+        }
     }
 }
