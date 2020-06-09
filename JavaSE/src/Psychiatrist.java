@@ -8,4 +8,13 @@ public class Psychiatrist {
     public void putQuestion(String q) {
         question = "  " + q + " ";
     }
+
+    public String getReply() {
+        int variation = randomValue.nextInt(3);
+        switch (variation) {
+            case 0:
+                reply = transformQuestion();
+                break;
+        }
+    }
 }
