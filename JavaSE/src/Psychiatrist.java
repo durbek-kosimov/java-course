@@ -15,10 +15,13 @@ public class Psychiatrist {
             case 0:
                 reply = transformQuestion();
                 break;
-
             case 1:
                 reply = "Why do you feel that?";
                 break;
+            case 2:
+                reply = "please be frank!";
+                break;
         }
+        return reply;
     }
 }
