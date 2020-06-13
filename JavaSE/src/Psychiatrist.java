@@ -15,6 +15,10 @@ public class Psychiatrist {
             case 0:
                 reply = transformQuestion();
                 break;
+
+            case 1:
+                reply = "Why do you feel that?";
+                break;
         }
     }
 }
