@@ -24,4 +24,12 @@ public class Psychiatrist {
         }
         return reply;
     }
+
+    private String transformQuestion() {
+        if (question.indexOf(" I ") >= 0) {
+            String tempReply = replace (question, " I ", " you ");
+            tempReply = replace(tempReply, " am ", " are ");
+            return replace(tempReply, " my ", " your ") + "-why?";
+        }
+    }
 }
