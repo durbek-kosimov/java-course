@@ -31,5 +31,10 @@ public class Psychiatrist {
             tempReply = replace(tempReply, " am ", " are ");
             return replace(tempReply, " my ", " your ") + "-why?";
         }
+        else
+            if (question.indexOf(" no ") >= 0)
+                return "no? that is negative! Please explain...";
+            else
+                return "\"" + question + "\"-Please re-phrase..";
     }
 }
