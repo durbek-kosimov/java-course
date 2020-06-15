@@ -37,4 +37,15 @@ public class Psychiatrist {
             else
                 return "\"" + question + "\"-Please re-phrase..";
     }
+
+    private String replace(String original, String from, String to) {
+        String leftBit, rightBit;
+        int startSearch = 0;
+        int place = original.indexOf(from);
+        if (from.length() != 0) {
+            while (place >= startSearch) {
+
+            }
+        }
+    }
 }
