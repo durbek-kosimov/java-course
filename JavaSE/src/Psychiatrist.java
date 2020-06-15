@@ -44,8 +44,13 @@ public class Psychiatrist {
         int place = original.indexOf(from);
         if (from.length() != 0) {
             while (place >= startSearch) {
-
+                leftBit = original.substring(0, place);
+                rightBit = original.substring(place + from.length(), original.length());
+                original = leftBit + to + rightBit;
+                startSearch = leftBit.length() + to.length();
+                place = original.indexOf(from);
             }
         }
+        return original;
     }
 }
