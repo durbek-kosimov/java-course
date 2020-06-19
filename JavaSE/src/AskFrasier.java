@@ -18,5 +18,8 @@ public class AskFrasier extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         Container window = getContentPane();
         window.setLayout(new FlowLayout());
+
+        questionLabel = new JLabel("Type here.... ");
+        window.add(questionLabel);
     }
 }
