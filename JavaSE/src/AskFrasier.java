@@ -21,5 +21,10 @@ public class AskFrasier extends JFrame implements ActionListener {
 
         questionLabel = new JLabel("Type here.... ");
         window.add(questionLabel);
+
+        questionField = new JTextField(30);
+        window.add(questionField);
+        questionField.addActionListener(this);
+
     }
 }
