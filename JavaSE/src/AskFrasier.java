@@ -26,5 +26,7 @@ public class AskFrasier extends JFrame implements ActionListener {
         window.add(questionField);
         questionField.addActionListener(this);
 
+        psychiatristLabel = new JLabel("Frasier says: ");
+        window.add(psychiatristLabel);
     }
 }
