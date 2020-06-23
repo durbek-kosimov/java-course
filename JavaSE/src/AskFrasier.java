@@ -32,5 +32,7 @@ public class AskFrasier extends JFrame implements ActionListener {
         replyField = new JTextField("Go ahead please... I'm listening.", 30);
         replyField.setEditable(false);
         window.add(replyField);
+
+        frasier = new Psychiatrist();
     }
 }
