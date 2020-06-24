@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class AskFrasier extends JFrame implements ActionListener {
@@ -34,5 +35,11 @@ public class AskFrasier extends JFrame implements ActionListener {
         window.add(replyField);
 
         frasier = new Psychiatrist();
+    }
+
+    public void actionPerformed(ActionEvent event) {
+        if (event.getSource() == questionField) {
+            String itsValue = questionField.getText();
+        }
     }
 }
