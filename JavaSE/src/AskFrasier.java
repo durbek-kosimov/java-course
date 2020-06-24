@@ -40,6 +40,8 @@ public class AskFrasier extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent event) {
         if (event.getSource() == questionField) {
             String itsValue = questionField.getText();
+            frasier.putQuestion(itsValue);
+            replyField.setText(frasier.getReply());
         }
     }
 }
