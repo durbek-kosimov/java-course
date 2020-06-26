@@ -13,4 +13,8 @@ public class ExceptionDemo1 extends JFrame implements ActionListener {
         frame.creationGUI();
         frame.setVisible(true);
     }
+
+    private void creationGUI() {
+
+    }
 }
