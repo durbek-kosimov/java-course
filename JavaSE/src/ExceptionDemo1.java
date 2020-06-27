@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class ExceptionDemo1 extends JFrame implements ActionListener {
@@ -15,6 +16,8 @@ public class ExceptionDemo1 extends JFrame implements ActionListener {
     }
 
     private void creationGUI() {
-
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Container window = getContentPane();
+        window.setLayout(new FlowLayout());
     }
 }
