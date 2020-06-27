@@ -19,5 +19,8 @@ public class ExceptionDemo1 extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         Container window = getContentPane();
         window.setLayout(new FlowLayout());
+
+        inputLabel = new JLabel("Integer: ");
+        window.add(inputLabel);
     }
 }
