@@ -22,5 +22,8 @@ public class ExceptionDemo1 extends JFrame implements ActionListener {
 
         inputLabel = new JLabel("Integer: ");
         window.add(inputLabel);
+
+        inputField = new JTextField(10);
+        window.add(inputField);
     }
 }
