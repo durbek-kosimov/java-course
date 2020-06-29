@@ -25,5 +25,9 @@ public class ExceptionDemo1 extends JFrame implements ActionListener {
 
         inputField = new JTextField(10);
         window.add(inputField);
+
+        doubleButton = new JButton("Double it!");
+        window.add(doubleButton);
+        doubleButton.addActionListener(this);
     }
 }
