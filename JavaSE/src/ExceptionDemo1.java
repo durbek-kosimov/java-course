@@ -33,6 +33,7 @@ public class ExceptionDemo1 extends JFrame implements ActionListener {
         resultLabel = new JLabel("Doubled value is: ");
         window.add(resultLabel);
 
-
+        resultField = new JTextField(10);
+        window.add(resultField);
     }
 }
