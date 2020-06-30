@@ -29,5 +29,10 @@ public class ExceptionDemo1 extends JFrame implements ActionListener {
         doubleButton = new JButton("Double it!");
         window.add(doubleButton);
         doubleButton.addActionListener(this);
+
+        resultLabel = new JLabel("Doubled value is: ");
+        window.add(resultLabel);
+
+
     }
 }
