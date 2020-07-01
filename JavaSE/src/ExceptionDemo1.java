@@ -36,4 +36,10 @@ public class ExceptionDemo1 extends JFrame implements ActionListener {
         resultField = new JTextField(10);
         window.add(resultField);
     }
+
+    public void actionPerformed(ActiveEvent event) {
+        if (event.getSource() == doubleButton) {
+            resultField.setText("");
+        }
+    }
 }
