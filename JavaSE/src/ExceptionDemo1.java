@@ -40,6 +40,11 @@ public class ExceptionDemo1 extends JFrame implements ActionListener {
     public void actionPerformed(ActiveEvent event) {
         if (event.getSource() == doubleButton) {
             resultField.setText("");
+            try {
+                int number = Integer.parseInt(inputField.getText());
+                resultField.setText(Integer.toString(2 * number));
+            } catch (NumberFormatException errorObject) {
+            }
         }
     }
 }
