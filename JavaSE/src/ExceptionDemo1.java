@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class ExceptionDemo1 extends JFrame implements ActionListener {
@@ -37,13 +38,14 @@ public class ExceptionDemo1 extends JFrame implements ActionListener {
         window.add(resultField);
     }
 
-    public void actionPerformed(ActiveEvent event) {
+    public void actionPerformed(ActionEvent event) {
         if (event.getSource() == doubleButton) {
             resultField.setText("");
             try {
                 int number = Integer.parseInt(inputField.getText());
                 resultField.setText(Integer.toString(2 * number));
             } catch (NumberFormatException errorObject) {
+                JOptionPane.showMessageDialog(null,"Error in number: retype");
             }
         }
     }
