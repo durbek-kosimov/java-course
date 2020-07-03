@@ -8,4 +8,11 @@ public class FileOutputDemo extends JFrame implements ActionListener {
     private JTextField nameField;
     private JLabel nameLabel;
     private PrintWriter outFiles;
+
+    public static void main(String[] args) {
+        FileOutputDemo frame = new FileOutputDemo();
+        frame.setSize(400, 300);
+        frame.createGUI();
+        frame.setVisible(true);
+    }
 }
