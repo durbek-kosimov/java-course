@@ -21,6 +21,7 @@ public class FileOutputDemo extends JFrame implements ActionListener {
         Container window = getContentPane();
         window.setLayout(new FlowLayout());
 
-
+        nameLabel = new JLabel("File name: ");
+        window.add(nameLabel);
     }
 }
