@@ -23,5 +23,10 @@ public class FileOutputDemo extends JFrame implements ActionListener {
 
         nameLabel = new JLabel("File name: ");
         window.add(nameLabel);
+
+        nameField = new JTextField(20);
+        window.add(nameField);
+
+        textArea = new JTextArea(10,10);
     }
 }
