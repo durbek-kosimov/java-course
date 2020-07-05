@@ -28,5 +28,7 @@ public class FileOutputDemo extends JFrame implements ActionListener {
         window.add(nameField);
 
         textArea = new JTextArea(10,10);
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        window.add(scrollPane);
     }
 }
