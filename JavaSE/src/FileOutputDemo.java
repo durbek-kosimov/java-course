@@ -30,5 +30,9 @@ public class FileOutputDemo extends JFrame implements ActionListener {
         textArea = new JTextArea(10,10);
         JScrollPane scrollPane = new JScrollPane(textArea);
         window.add(scrollPane);
+
+        saveButton = new JButton("save");
+        window.add(saveButton);
+        saveButton.addActionListener(this);
     }
 }
