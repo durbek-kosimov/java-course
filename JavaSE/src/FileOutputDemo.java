@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileWriter;
 import java.io.PrintWriter;
 
 public class FileOutputDemo extends JFrame implements ActionListener {
@@ -8,7 +10,7 @@ public class FileOutputDemo extends JFrame implements ActionListener {
     private JButton saveButton;
     private JTextField nameField;
     private JLabel nameLabel;
-    private PrintWriter outFiles;
+    private PrintWriter outFile;
 
     public static void main(String[] args) {
         FileOutputDemo frame = new FileOutputDemo();
@@ -34,5 +36,15 @@ public class FileOutputDemo extends JFrame implements ActionListener {
         saveButton = new JButton("save");
         window.add(saveButton);
         saveButton.addActionListener(this);
+    }
+
+    public void actionPerformed(ActionEvent event) {
+        if (event.getSource() == saveButton) {
+            try {
+                outFile = new PrintWriter(new FileWriter(nameField.getText()), true);
+                outFile.print(textArea.getText());
+                outFile.close();
+            }
+        }
     }
 }
