@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 
 public class FileOutputDemo extends JFrame implements ActionListener {
@@ -44,6 +45,8 @@ public class FileOutputDemo extends JFrame implements ActionListener {
                 outFile = new PrintWriter(new FileWriter(nameField.getText()), true);
                 outFile.print(textArea.getText());
                 outFile.close();
+            } catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "File Error: " + e.toString());
             }
         }
     }
