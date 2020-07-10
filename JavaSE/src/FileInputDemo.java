@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 
@@ -14,5 +15,13 @@ public class FileInputDemo extends JFrame implements ActionListener {
         frame.setSize(400, 300);
         frame.createGUI();
         frame.setVisible(true);
+    }
+
+    private void createGUI() {
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Container window = getContentPane();
+        window.setLayout(new FlowLayout());
+
+
     }
 }
