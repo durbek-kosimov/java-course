@@ -25,6 +25,8 @@ public class FileInputDemo extends JFrame implements ActionListener {
         nameLabel = new JLabel("File name: ");
         window.add(nameLabel);
 
-
+        nameField = new JTextField(20);
+        window.add(nameField);
+        nameField.addActionListener(this);
     }
 }
