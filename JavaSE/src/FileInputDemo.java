@@ -22,6 +22,9 @@ public class FileInputDemo extends JFrame implements ActionListener {
         Container window = getContentPane();
         window.setLayout(new FlowLayout());
 
+        nameLabel = new JLabel("File name: ");
+        window.add(nameLabel);
+
 
     }
 }
