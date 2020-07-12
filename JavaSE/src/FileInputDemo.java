@@ -32,5 +32,9 @@ public class FileInputDemo extends JFrame implements ActionListener {
         textArea = new JTextArea("", 10,30);
         JScrollPane scrollPane = new JScrollPane(textArea);
         window.add(scrollPane);
+
+        openButton = new JButton("open");
+        window.add(openButton);
+        openButton.addActionListener(this);
     }
 }
