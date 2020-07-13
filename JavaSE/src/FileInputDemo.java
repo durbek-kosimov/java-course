@@ -1,7 +1,9 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.FileReader;
 
 public class FileInputDemo extends JFrame implements ActionListener {
     private JTextArea textArea;
@@ -36,5 +38,15 @@ public class FileInputDemo extends JFrame implements ActionListener {
         openButton = new JButton("open");
         window.add(openButton);
         openButton.addActionListener(this);
+    }
+
+    public void actionPerformed(ActionEvent event) {
+        if (event.getSource() == openButton) {
+            try {
+                inFile = new BufferedReader(new FileReader(nameField.getText()));
+                textArea.setText("");
+                String line;
+            }
+        }
     }
 }
