@@ -4,6 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.io.IOException;
 
 public class FileInputDemo extends JFrame implements ActionListener {
     private JTextArea textArea;
@@ -50,6 +51,9 @@ public class FileInputDemo extends JFrame implements ActionListener {
                     textArea.append(line + "\n");
                 }
                 inFile.close();
+            }
+            catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "File Error: " + e.toString());
             }
         }
     }
