@@ -47,7 +47,7 @@ public class FileInputDemo extends JFrame implements ActionListener {
                 inFile = new BufferedReader(new FileReader(nameField.getText()));
                 textArea.setText("");
                 String line;
-                while ((line = inFile.readLine() != null)) {
+                while ((line = inFile.readLine()) != null) {
                     textArea.append(line + "\n");
                 }
                 inFile.close();
