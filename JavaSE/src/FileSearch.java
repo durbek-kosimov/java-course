@@ -10,4 +10,8 @@ public class FileSearch extends JFrame implements ActionListener {
     private JTextField result2Field;
     private JTextField personField;
     private JTextField fileNameField;
+    private String fileName;
+    private JLabel result1Label, result2Label;
+    private JLabel personNameLabel;
+    private JLabel fileLabel;
 }
