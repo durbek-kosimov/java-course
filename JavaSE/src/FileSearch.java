@@ -14,4 +14,11 @@ public class FileSearch extends JFrame implements ActionListener {
     private JLabel result1Label, result2Label;
     private JLabel personNameLabel;
     private JLabel fileLabel;
+
+    public static void main(String[] args) {
+        FileSearch frame = new FileSearch();
+        frame.setSize(400, 150);
+        frame.createGUI();
+        frame.setVisible(true);
+    }
 }
