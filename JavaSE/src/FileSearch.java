@@ -26,5 +26,8 @@ public class FileSearch extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         Container window = getContentPane();
         window.setLayout(new FlowLayout());
+
+        fileLabel = new JLabel("File name");
+        window.add(fileLabel);
     }
 }
