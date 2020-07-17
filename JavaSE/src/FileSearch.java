@@ -21,4 +21,10 @@ public class FileSearch extends JFrame implements ActionListener {
         frame.createGUI();
         frame.setVisible(true);
     }
+
+    private void createGUI() {
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Container window = getContentPane();
+        window.setLayout(new FlowLayout());
+    }
 }
