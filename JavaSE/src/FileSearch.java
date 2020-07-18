@@ -33,5 +33,8 @@ public class FileSearch extends JFrame implements ActionListener {
         fileNameField = new JTextField(25);
         fileNameField.setText("");
         window.add(fileNameField);
+
+        personNameLabel = new JLabel("Type Name:");
+        window.add(personNameLabel);
     }
 }
