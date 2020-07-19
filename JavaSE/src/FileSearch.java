@@ -36,5 +36,11 @@ public class FileSearch extends JFrame implements ActionListener {
 
         personNameLabel = new JLabel("Type Name:");
         window.add(personNameLabel);
+
+        personField = new JTextField(15);
+        personField.setText("");
+        window.add(personField);
+
+
     }
 }
