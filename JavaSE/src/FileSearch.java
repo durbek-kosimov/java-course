@@ -41,6 +41,8 @@ public class FileSearch extends JFrame implements ActionListener {
         personField.setText("");
         window.add(personField);
 
-
+        searchButton = new Button("Search for name");
+        window.add(searchButton);
+        searchButton.addActionListener(this);
     }
 }
