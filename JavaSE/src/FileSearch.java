@@ -51,5 +51,8 @@ public class FileSearch extends JFrame implements ActionListener {
         result1Field = new JTextField(5);
         result1Field.setEditable(false);
         window.add(result1Field);
+
+        result2Label = new JLabel("Result2:");
+        window.add(result2Label);
     }
 }
