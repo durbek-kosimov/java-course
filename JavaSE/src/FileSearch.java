@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 
@@ -58,5 +59,13 @@ public class FileSearch extends JFrame implements ActionListener {
         result2Field = new JTextField(5);
         result2Field.setEditable(false);
         window.add(result2Field);
+    }
+
+    public void actionPerformed(ActionEvent evt) {
+        if (evt.getSource() == searchButton) {
+            result1Field.setText("");
+            result2Field.setText("");
+            fileName = fileNameField.getText();
+        }
     }
 }
