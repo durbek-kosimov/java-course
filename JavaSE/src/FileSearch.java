@@ -3,6 +3,8 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class FileSearch extends JFrame implements ActionListener {
     private BufferedReader inFile;
@@ -66,6 +68,14 @@ public class FileSearch extends JFrame implements ActionListener {
             result1Field.setText("");
             result2Field.setText("");
             fileName = fileNameField.getText();
+            try {
+                inFile = new BufferedReader(new FileReader(fileName));
+            }
+            catch (IOException e) {
+                JOptionPane.showMessageDialog(null, "Can't find file: " +
+                        fileNameField.getText());
+                return;
+            }
         }
     }
 }
