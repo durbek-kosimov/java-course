@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.StringTokenizer;
 
 public class FileSearch extends JFrame implements ActionListener {
     private BufferedReader inFile;
@@ -75,6 +76,22 @@ public class FileSearch extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null, "Can't find file: " +
                         fileNameField.getText());
                 return;
+            }
+//            now read the file
+            try {
+                String line;
+                boolean found = false;
+                while (((line = inFile.readLine()) != null) && (!found)) {
+//                    tokens split on commas, spaces
+                    StringTokenizer tokens = new StringTokenizer(line, ",");
+                    String nameInFile = tokens.nextToken();
+                    if (personField.getText().equals(nameInFile)) {
+                        found = true;
+                        result1Field.setText(tokens.nextToken());
+                        result2Field.setText(tokens.nextToken());
+                    }
+                }
+                inFile.close();
             }
         }
     }
