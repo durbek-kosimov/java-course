@@ -93,6 +93,10 @@ public class FileSearch extends JFrame implements ActionListener {
                 }
                 inFile.close();
             }
+            catch (IOException e) {
+                JOptionPane.showMessageDialog(null,
+                        "Error reading file " + fileName + ": " + e.toString());
+            }
         }
     }
 }
