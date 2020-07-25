@@ -60,6 +60,18 @@ class Balloon2 {
         x += xStep;
     }
 
+    public void moveLeft(int xStep) {
+        x -= xStep;
+    }
+
+    public void moveUp(int yStep) {
+        y += yStep;
+    }
+
+    public void moveDown(int yStep) {
+        y -= yStep;
+    }
+
     public void changeSize(int change) {
         diameter += change;
     }
