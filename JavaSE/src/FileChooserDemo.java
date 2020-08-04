@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionListener;
 
 public class FileChooserDemo extends JFrame implements ActionListener {
@@ -11,5 +12,11 @@ public class FileChooserDemo extends JFrame implements ActionListener {
         frame.setSize(300, 150);
         frame.createGUI();
         frame.setVisible(true);
+    }
+
+    private void createGUI() {
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        Container window = getContentPane();
+        window.setLayout(new FlowLayout());
     }
 }
