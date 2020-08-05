@@ -18,5 +18,9 @@ public class FileChooserDemo extends JFrame implements ActionListener {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         Container window = getContentPane();
         window.setLayout(new FlowLayout());
+
+        openButton = new JButton("open");
+        window.add(openButton);
+        openButton.addActionListener(this);
     }
 }
