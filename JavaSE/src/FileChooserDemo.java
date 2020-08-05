@@ -22,5 +22,9 @@ public class FileChooserDemo extends JFrame implements ActionListener {
         openButton = new JButton("open");
         window.add(openButton);
         openButton.addActionListener(this);
+
+        saveButton = new JButton("save");
+        window.add(saveButton);
+        saveButton.addActionListener(this);
     }
 }
