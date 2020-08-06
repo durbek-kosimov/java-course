@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 public class FileChooserDemo extends JFrame implements ActionListener {
     private JButton openButton, saveButton;
@@ -29,5 +30,10 @@ public class FileChooserDemo extends JFrame implements ActionListener {
 
         nameField = new JTextField(25);
         window.add(nameField);
+    }
+
+    public void actionPerformed(ActiveEvent event) {
+        File selectedFile;
+        int reply;
     }
 }
