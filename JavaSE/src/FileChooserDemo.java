@@ -26,5 +26,8 @@ public class FileChooserDemo extends JFrame implements ActionListener {
         saveButton = new JButton("save");
         window.add(saveButton);
         saveButton.addActionListener(this);
+
+        nameField = new JTextField(25);
+        window.add(nameField);
     }
 }
