@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
@@ -32,12 +33,20 @@ public class FileChooserDemo extends JFrame implements ActionListener {
         window.add(nameField);
     }
 
-    public void actionPerformed(ActiveEvent event) {
+    public void actionPerformed(ActionEvent event) {
         File selectedFile;
         int reply;
         if (event.getSource() == saveButton) {
             fileChooser = new JFileChooser();
-            reply = JFileChooser.showSaveDialog(this);
+            reply = fileChooser.showSaveDialog(this);
+            if (reply == JFileChooser.APPROVE_OPTION) {
+                selectedFile = fileChooser.getSelectedFile();
+                nameField.setText(selectedFile.getAbsolutePath());
+            }
+        }
+        if (event.getSource() == openButton) {
+            fileChooser = new JFileChooser();
+            reply = fileChooser.showOpenDialog(this);
             if (reply == JFileChooser.APPROVE_OPTION) {
                 selectedFile = fileChooser.getSelectedFile();
                 nameField.setText(selectedFile.getAbsolutePath());
