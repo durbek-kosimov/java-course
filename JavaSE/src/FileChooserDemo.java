@@ -35,5 +35,13 @@ public class FileChooserDemo extends JFrame implements ActionListener {
     public void actionPerformed(ActiveEvent event) {
         File selectedFile;
         int reply;
+        if (event.getSource() == saveButton) {
+            fileChooser = new JFileChooser();
+            reply = JFileChooser.showSaveDialog(this);
+            if (reply == JFileChooser.APPROVE_OPTION) {
+                selectedFile = fileChooser.getSelectedFile();
+                nameField.setText(selectedFile.getAbsolutePath());
+            }
+        }
     }
 }
