@@ -1,4 +1,5 @@
 import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.InputStreamReader;
 
 public class Finder {
@@ -17,5 +18,13 @@ public class Finder {
         String wanted = prompt("Type string to find: ");
         line1 = "";
         line2 = "";
+        try {
+            inStream = new BufferedReader(new FileReader(fileName));
+            while ((line3 = inStream.readLine()) != null) {
+                if (line2.indexOf(wanted) >= 0) {
+                    displayLine();
+                }
+            }
+        }
     }
 }
