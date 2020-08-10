@@ -30,6 +30,11 @@ public class Finder {
 //                and get new line3 from file...
             }
 //            check the last line
+            line3 = "";     // remove null eof value
+            if (line2.indexOf(wanted) >= 0) {
+                displayLine();
+            }
+            inStream.close();
         }
     }
 }
