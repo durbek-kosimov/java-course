@@ -24,7 +24,12 @@ public class Finder {
                 if (line2.indexOf(wanted) >= 0) {
                     displayLine();
                 }
+//                advance to the next group of 3
+                line1 = line2;
+                line2 = line3;
+//                and get new line3 from file...
             }
+//            check the last line
         }
     }
 }
