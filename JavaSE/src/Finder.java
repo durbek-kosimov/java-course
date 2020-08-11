@@ -1,6 +1,4 @@
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.InputStreamReader;
+import java.io.*;
 
 public class Finder {
     private String line1, line2, line3;
@@ -35,6 +33,10 @@ public class Finder {
                 displayLine();
             }
             inStream.close();
+        } catch (IOException e) {
+//            e.printStackTrace();
+            System.err.println("Error in Finder: " + e.toString());
+            System.exit(1);
         }
     }
 }
