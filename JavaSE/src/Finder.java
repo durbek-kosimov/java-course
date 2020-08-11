@@ -39,4 +39,13 @@ public class Finder {
             System.exit(1);
         }
     }
+
+    private void displayLine() {
+        System.out.println("[=== context:");
+        System.out.println(line1);
+        System.out.println(line2);
+        System.out.println(line3);
+        System.out.println("===]");
+        System.out.println("");
+    }
 }
