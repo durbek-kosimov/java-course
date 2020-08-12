@@ -50,11 +50,15 @@ public class Finder {
     }
 
     private String prompt(String message) {
-        String replay = "";
+        String reply = "";
         try {
             System.out.print(message);
             System.out.flush();
-            replay = keyboard.readLine();
+            reply = keyboard.readLine();
+        } catch (IOException e) {
+            System.err.println("Keyboard " + e.toString());
+            System.exit(2);
         }
+        return reply;
     }
 }
