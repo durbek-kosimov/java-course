@@ -48,4 +48,13 @@ public class Finder {
         System.out.println("===]");
         System.out.println("");
     }
+
+    private String prompt(String message) {
+        String replay = "";
+        try {
+            System.out.print(message);
+            System.out.flush();
+            replay = keyboard.readLine();
+        }
+    }
 }
