@@ -5,7 +5,10 @@ public class SimpleFrame extends JFrame {
         super("Frame Title");
         setSize(300, 100);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setLookAndFeel();
         setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        SimpleFrame sf = new SimpleFrame();
     }
 }
