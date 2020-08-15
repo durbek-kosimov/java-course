@@ -16,4 +16,8 @@ public class ButtonFrame extends JFrame {
         add(pane);
         setVisible(true);
     }
+
+    public static void main(String[] args) {
+        ButtonFrame bf = new ButtonFrame();
+    }
 }
