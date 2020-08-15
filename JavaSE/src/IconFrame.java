@@ -27,4 +27,9 @@ public class IconFrame extends JFrame {
         pack();
         setVisible(true);
     }
+
+    public static void main(String[] args) {
+        IconFrame ike = new IconFrame();
+    }
+
 }
