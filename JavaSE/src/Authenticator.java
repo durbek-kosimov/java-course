@@ -7,5 +7,10 @@ public class Authenticator extends JFrame {
     JButton ok = new JButton("OK");
     JButton cancel = new JButton("Cancel");
 
+    public Authenticator() {
+        super("Account Information");
+        setSize(300, 220);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
 
+    }
 }
