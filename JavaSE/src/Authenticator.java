@@ -1,7 +1,7 @@
 import javax.swing.*;
 
 public class Authenticator extends JFrame {
-    JTextField username = new JTextField();
+    JTextField username = new JTextField(15);
     JPasswordField password = new JPasswordField(15);
     JTextArea comments = new JTextArea(4, 15);
     JButton ok = new JButton("OK");
