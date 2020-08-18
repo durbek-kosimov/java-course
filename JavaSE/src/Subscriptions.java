@@ -19,7 +19,16 @@ public class Subscriptions extends JFrame {
         setVisible(true);
     }
 
+    private static void setLookAndFeel() {
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+
     public static void main(String[] args) {
+        Subscriptions.setLookAndFeel();
         Subscriptions app = new Subscriptions();
     }
 }
