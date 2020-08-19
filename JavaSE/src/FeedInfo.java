@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class FeedInfo extends JFrame {
     private JLabel nameLabel = new JLabel("Name: ", SwingConstants.RIGHT);
@@ -26,6 +27,16 @@ public class FeedInfo extends JFrame {
                 "Site Type", 0, JOptionPane.QUESTION_MESSAGE, null, choices, choices[0]);
         type = new JTextField(choices[response3], 20);
 
-
+        setLayout(new GridLayout(3, 2));
+        add(nameLabel);
+        add(name);
+        add(urlLabel);
+        add(url);
+        add(typeLabel);
+        add(type);
+        setLookAndFeel();
+        setVisible(true);
     }
+
+
 }
