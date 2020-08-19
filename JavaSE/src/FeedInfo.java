@@ -47,5 +47,7 @@ public class FeedInfo extends JFrame {
         }
     }
 
-
+    public static void main(String[] args) {
+        FeedInfo frame = new FeedInfo();
+    }
 }
