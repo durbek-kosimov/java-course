@@ -43,7 +43,7 @@ public class FeedInfo extends JFrame {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
             SwingUtilities.updateComponentTreeUI(this);
         } catch (Exception e) {
-            System.err.println("Couldn't use the system " + "look and feel: " + e);
+            System.err.println("Couldn't use the system look and feel: " + e);
         }
     }
 
