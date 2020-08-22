@@ -14,6 +14,10 @@ public class Stacker extends JFrame {
         JButton unsubscribe = new JButton("Unsubscribe");
         JButton refresh = new JButton("Refresh");
         JButton save = new JButton("Save");
+        commandPane.add(subscribe);
+        commandPane.add(unsubscribe);
+        commandPane.add(refresh);
+        commandPane.add(save);
 
     }
 }
