@@ -31,5 +31,15 @@ public class Stacker extends JFrame {
         setVisible(true);
     }
 
+    private void setLookAndFeel() {
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+            SwingUtilities.updateComponentTreeUI(this);
+        }
+        catch (Exception e) {
+            System.err.println("Couldn't use the system look and feel: " + e);
+        }
+    }
+
 
 }
