@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class Stacker extends JFrame {
     public Stacker() {
@@ -23,5 +24,12 @@ public class Stacker extends JFrame {
         JTextArea text = new JTextArea(4, 70);
         JScrollPane scrollPane = new JScrollPane(text);
 //        put them together
+        FlowLayout flow = new FlowLayout();
+        setLayout(flow);
+        add(commandPane);
+        add(scrollPane);
+        setVisible(true);
     }
+
+
 }
