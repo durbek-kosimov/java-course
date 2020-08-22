@@ -18,6 +18,10 @@ public class Stacker extends JFrame {
         commandPane.add(unsubscribe);
         commandPane.add(refresh);
         commandPane.add(save);
-
+//      create bottom panel
+        JPanel textPane = new JPanel();
+        JTextArea text = new JTextArea(4, 70);
+        JScrollPane scrollPane = new JScrollPane(text);
+//        put them together
     }
 }
