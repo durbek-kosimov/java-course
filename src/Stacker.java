@@ -41,5 +41,7 @@ public class Stacker extends JFrame {
         }
     }
 
-
+    public static void main(String[] args) {
+        Stacker st = new Stacker();
+    }
 }
