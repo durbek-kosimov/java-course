@@ -24,4 +24,12 @@ public class SurveyWizard extends JPanel implements ActionListener {
         ask[2].setFinalQuestion(true);
         addListeners();
     }
+
+    private void addListeners() {
+        for (int i = 0; i < ask.length; i ++) {
+            ask[i].nextButton.addActionListener(this);
+            ask[i].finalButton.addActionListener(this);
+            add(ask[i], "Card " + i);
+        }
+    }
 }
