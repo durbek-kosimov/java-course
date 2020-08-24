@@ -7,5 +7,10 @@ public class SurveyWizard extends JPanel implements ActionListener {
     CardLayout cards = new CardLayout();
     SurveyPanel[] ask = SurveyPanel[3];
 
-
+    public SurveyWizard() {
+        super();
+        setSize(240, 140);
+        setLayout(cards);
+//        set up servey
+    }
 }
