@@ -68,6 +68,17 @@ class SurveyPanel extends JPanel {
             group.add(response[i]);
             sub2.add(response[i]);
         }
-
+        JPanel sub3 = new JPanel();
+        nextButton.setEnabled(true);
+        sub3.add(finalButton);
+        finalButton.setEnabled(false);
+        sub3.add(finalButton);
+        GridLayout grid = new GridLayout(3, 1);
+        setLayout(grid);
+        add(sub1);
+        add(sub2);
+        add(sub3);
     }
+
+
 }
