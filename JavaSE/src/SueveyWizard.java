@@ -43,3 +43,11 @@ public class SurveyWizard extends JPanel implements ActionListener {
     }
 }
 
+class SurveyPanel extends JPanel {
+    JLabel question;
+    JRadioButton[] response;
+    JButton nextButton = new JButton("Next");
+    JButton finalButton = new JButton("Final");
+
+
+}
