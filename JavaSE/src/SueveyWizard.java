@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class SurveyWizard extends JPanel implements ActionListener {
@@ -32,4 +33,13 @@ public class SurveyWizard extends JPanel implements ActionListener {
             add(ask[i], "Card " + i);
         }
     }
+
+    public void actionPerformed(ActionEvent e) {
+        currentCard ++;
+        if (currentCard >= ask.length) {
+            System.exit(0);
+        }
+        cards.show(this, "Card " + currentCard);
+    }
 }
+
