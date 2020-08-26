@@ -80,5 +80,10 @@ class SurveyPanel extends JPanel {
         add(sub3);
     }
 
-
+    void setFinalQuestion(boolean finalQuestion) {
+        if (finalQuestion) {
+            nextButton.setEnabled(false);
+            finalButton.setEnabled(true);
+        }
+    }
 }
