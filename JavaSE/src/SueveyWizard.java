@@ -60,6 +60,14 @@ class SurveyPanel extends JPanel {
         JLabel questLabel = new JLabel(ques);
         sub1.add(questLabel);
         JPanel sub2 = new JPanel();
+        for (int i = 0; i < resp.length; i ++) {
+            if (def == 1)
+                response[i] = new JRadioButton(resp[i], true);
+            else
+                response[i] = new JRadioButton(resp[i], false);
+            group.add(response[i]);
+            sub2.add(response[i]);
+        }
 
     }
 }
