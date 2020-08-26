@@ -50,4 +50,16 @@ class SurveyPanel extends JPanel {
     JButton finalButton = new JButton("Final");
 
 
+    SurveyPanel(String ques, String[] resp, int def) {
+        super();
+        setSize(160, 110);
+        question = new JLabel(ques);
+        response = new JRadioButton[resp.length];
+        JPanel sub1 = new JPanel();
+        ButtonGroup group = new ButtonGroup();
+        JLabel questLabel = new JLabel(ques);
+        sub1.add(questLabel);
+        JPanel sub2 = new JPanel();
+
+    }
 }
