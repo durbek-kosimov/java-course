@@ -3,6 +3,31 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+public class SurveyFrame extends JFrame {
+    public SurveyFrame() {
+        super("Survey");
+        setSize(290, 140);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setLookAndFeel();
+        SurveyWizard wiz = new SurveyWizard();
+        add(wiz);
+        setVisible(true);
+    }
+
+    private void setLookAndFeel() {
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+            SwingUtilities.updateComponentTreeUI(this);
+        } catch (Exception e) {
+            System.err.println("Couldn't use the system look and feel: " + e);
+        }
+    }
+
+    public static void main(String[] args) {
+        SurveyFrame surv = new SurveyFrame();
+    }
+}
+
 public class SurveyWizard extends JPanel implements ActionListener {
     int currentCard = 0;
     CardLayout cards = new CardLayout();
