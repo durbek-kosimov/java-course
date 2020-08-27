@@ -28,10 +28,10 @@ public class SurveyFrame extends JFrame {
     }
 }
 
-public class SurveyWizard extends JPanel implements ActionListener {
+  class SurveyWizard extends JPanel implements ActionListener {
     int currentCard = 0;
     CardLayout cards = new CardLayout();
-    SurveyPanel[] ask = SurveyPanel[3];
+    SurveyPanel[] ask = new SurveyPanel[3];
 
     public SurveyWizard() {
         super();
