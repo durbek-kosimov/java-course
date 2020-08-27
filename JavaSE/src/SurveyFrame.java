@@ -95,7 +95,7 @@ class SurveyPanel extends JPanel {
         }
         JPanel sub3 = new JPanel();
         nextButton.setEnabled(true);
-        sub3.add(finalButton);
+        sub3.add(nextButton);
         finalButton.setEnabled(false);
         sub3.add(finalButton);
         GridLayout grid = new GridLayout(3, 1);
