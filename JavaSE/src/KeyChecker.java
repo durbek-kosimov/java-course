@@ -16,6 +16,15 @@ public class KeyChecker extends JFrame {
         setVisible(true);
     }
 
+    private void setLookAndFeel() {
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+            SwingUtilities.updateComponentTreeUI(this);
+        } catch (Exception e) {
+            System.err.println("Couldn't use the system look and feel: " + e);
+        }
+    }
+
     public static void main(String[] args) {
         KeyChecker.setLookAndFeel();
         new KeyChecker();
