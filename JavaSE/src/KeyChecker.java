@@ -1,5 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 
 public class KeyChecker extends JFrame {
     JLabel keyLabel = new JLabel("Hit any key");
@@ -16,10 +18,10 @@ public class KeyChecker extends JFrame {
         setVisible(true);
     }
 
-    private void setLookAndFeel() {
+    private static void setLookAndFeel() {
         try {
             UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
-            SwingUtilities.updateComponentTreeUI(this);
+//            SwingUtilities.updateComponentTreeUI(this);
         } catch (Exception e) {
             System.err.println("Couldn't use the system look and feel: " + e);
         }
@@ -28,5 +30,18 @@ public class KeyChecker extends JFrame {
     public static void main(String[] args) {
         KeyChecker.setLookAndFeel();
         new KeyChecker();
+    }
+}
+
+class KeyMonitor extends KeyAdapter {
+    KeyChecker display;
+
+    KeyMonitor(KeyChecker display) {
+        this.display = display;
+    }
+
+    public void keyTyped(KeyEvent event) {
+        display.keyLabel.setText("" + event.getKeyChar());
+        display.repaint();
     }
 }
