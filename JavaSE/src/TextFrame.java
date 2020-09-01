@@ -19,4 +19,15 @@ public class TextFrame extends JFrame {
     }
 }
 
+class TextFramePanel extends JPanel {
+    String text;
+    String fontName;
 
+    public TextFramePanel(String text, String fontName) {
+        super();
+        this.text = text;
+        this.fontName = fontName;
+    }
+
+
+}
