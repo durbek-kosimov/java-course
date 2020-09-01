@@ -9,4 +9,14 @@ public class TextFrame extends JFrame {
         add(sf);
         setVisible(true);
     }
+
+    public static void main(String[] args) {
+        if (args.length < 1) {
+            System.out.println("Usage: java TextFrame msg font");
+            System.exit(-1);
+        }
+        TextFrame tf = new TextFrame(args[0], args[1]);
+    }
 }
+
+
