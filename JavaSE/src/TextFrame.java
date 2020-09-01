@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class TextFrame extends JFrame {
     public TextFrame(String text, String fontName) {
@@ -29,5 +30,10 @@ class TextFramePanel extends JPanel {
         this.fontName = fontName;
     }
 
+    public void paintComponent(Graphics comp) {
+        super.paintComponent(comp);
+        Graphics2D comp2D = (Graphics2D) comp;
+        comp2D.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
+    }
 }
