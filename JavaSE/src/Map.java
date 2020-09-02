@@ -1,4 +1,6 @@
 import javax.swing.*;
+import java.awt.*;
+import java.awt.geom.Rectangle2D;
 
 public class Map extends JFrame {
     public Map() {
@@ -15,4 +17,13 @@ public class Map extends JFrame {
     }
 }
 
+class MApPane extends JPanel {
+    public void paintComponent(Graphics comp) {
+        Graphics2D comp2d = (Graphics2D) comp;
+        comp2d.setColor(Color.blue);
+        comp2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+        Rectangle2D.Float background = new Rectangle2D.Float(0F, 0F, getSize().width, getSize().height);
+        comp2d.fill(background);
+    }
 
+}
