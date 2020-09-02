@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Arc2D;
+import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D;
 
 public class Map extends JFrame {
@@ -36,6 +37,27 @@ class MApPane extends JPanel {
             }
         }
 //        Draw Florida
+        GradientPaint gp = new GradientPaint(0F, 0F, Color.green, 350F, 350F, Color.orange, true);
+        comp2d.setPaint(gp);
+        GeneralPath fl = new GeneralPath();
+        fl.moveTo(10F, 12F);
+        fl.moveTo(234F, 15F);
+        fl.moveTo(253F, 25F);
+        fl.moveTo(261F, 71F);
+        fl.moveTo(344F, 209F);
+        fl.moveTo(336F, 278F);
+        fl.moveTo(295F, 310F);
+        fl.moveTo(259F, 274F);
+        fl.moveTo(205F, 188F);
+        fl.moveTo(211F, 171F);
+        fl.moveTo(195F, 174F);
+        fl.moveTo(191F, 118F);
+        fl.moveTo(120F, 56F);
+        fl.moveTo(94F, 68F);
+        fl.moveTo(81F, 49F);
+        fl.moveTo(12F, 37F);
+        fl.closePath();
+//        Draw ovals
 
     }
 
