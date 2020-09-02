@@ -9,4 +9,10 @@ public class Map extends JFrame {
         add(map);
         setVisible(true);
     }
+
+    public static void main(String[] args) {
+        Map frame = new Map();
+    }
 }
+
+
