@@ -1,6 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.geom.Arc2D;
+import java.awt.geom.Ellipse2D;
 import java.awt.geom.GeneralPath;
 import java.awt.geom.Rectangle2D;
 
@@ -58,7 +59,15 @@ class MApPane extends JPanel {
         fl.moveTo(12F, 37F);
         fl.closePath();
 //        Draw ovals
-
+        comp2d.setColor(Color.black);
+        BasicStroke pen2 = new BasicStroke();
+        comp2d.setStroke(pen2);
+        Ellipse2D.Float e1 = new Ellipse2D.Float(235, 140, 15, 15);
+        Ellipse2D.Float e2 = new Ellipse2D.Float(225, 130, 15, 15);
+        Ellipse2D.Float e3 = new Ellipse2D.Float(245, 140, 15, 15);
+        comp2d.fill(e1);
+        comp2d.fill(e2);
+        comp2d.fill(e3);
     }
 
 }
