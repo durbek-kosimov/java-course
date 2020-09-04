@@ -18,6 +18,15 @@ public class PageData extends JFrame implements ActionListener, Runnable {
         setLookAndFeel();
         setLayout(new GridLayout(10, 1));
 
+        JPanel first = new JPanel();
+        first.setLayout(new FlowLayout(FlowLayout.RIGHT));
+        JLabel urlLabel = new JLabel("URL:");
+        url = new JTextField(22);
+        urlLabel.setLabelFor(url);
+        first.add(urlLabel);
+        first.add(url);
+        add(first);
+
 
     }
 }
