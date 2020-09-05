@@ -27,6 +27,28 @@ public class PageData extends JFrame implements ActionListener, Runnable {
         first.add(url);
         add(first);
 
-
+        JPanel second = new JPanel();
+        second.setLayout(new FlowLayout());
+        readPage = new JButton("Read Page");
+        clearPage = new JButton("Clear Fields");
+        quitLoading = new JButton("Quit Loading");
+        readPage.setMnemonic('r');
+        clearPage.setMnemonic('c');
+        quitLoading.setMnemonic('q');
+        readPage.setToolTipText("Begin Loading the Web Page");
+        clearPage.setToolTipText("Clear All Header Fields Below");
+        quitLoading.setToolTipText("Quit Loading the Web Page");
+        readPage.setEnabled(true);
+        clearPage.setEnabled(false);
+        quitLoading.setEnabled(false);
+        readPage.addActionListener(this);
+        clearPage.addActionListener(this);
+        quitLoading.addActionListener(this);
+        second.add(readPage);
+        second.add(clearPage);
+        second.add(quitLoading);
+        add(second);
     }
+
+
 }
