@@ -61,8 +61,16 @@ public class PageData extends JFrame implements ActionListener, Runnable {
             add(row[i]);
         }
 
-
+        JPanel last = new JPanel();
+        last.setLayout(new FlowLayout(FlowLayout.LEFT));
+        status = new JLabel("Enter a URL address to check.");
+        last.add(status);
+        add(last);
+        pack();
+        setVisible(true);
     }
+
+
 
 
 }
