@@ -1,6 +1,8 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.net.MalformedURLException;
 
 public class PageData extends JFrame implements ActionListener, Runnable {
     Thread runner;
@@ -68,6 +70,37 @@ public class PageData extends JFrame implements ActionListener, Runnable {
         add(last);
         pack();
         setVisible(true);
+    }
+
+    public void actionPerformed(ActionEvent event) {
+        Object source = event.getSource();
+        if (source == readPage) {
+            try {
+                page = new URL(url.getText());
+                if (runner == null) {
+                    runner = new Thread(this);
+                    runner.start();
+                }
+                quitLoading.setEnabled(true);
+                readPage.setEnabled(false);
+            } catch (MalformedURLException e) {
+                status.setText("Bad URL: " + page);
+            }
+        }
+        else if (source == clearPage) {
+            for (int i = 0; i < 7; i ++)
+                header[i].setText("");
+            quitLoading.setEnabled(false);
+            readPage.setEnabled(true);
+            clearPage.setEnabled(false);
+        }
+        else if (source == quitLoading) {
+            runner = null;
+            url.setText("");
+            quitLoading.setEnabled(false);
+            readPage.setEnabled(true);
+            clearPage.setEnabled(false);
+        }
     }
 
 
