@@ -48,6 +48,20 @@ public class PageData extends JFrame implements ActionListener, Runnable {
         second.add(clearPage);
         second.add(quitLoading);
         add(second);
+
+        JPanel[] row = new JPanel[7];
+        for (int i = 0; i < 7; i ++) {
+            row[i] = new JPanel();
+            row[i].setLayout(new FlowLayout(FlowLayout.RIGHT));
+            headerLabel[i] = new JLabel(headers[i] + ":");
+            header[i] = new JTextField(22);
+            headerLabel[i].setLabelFor(header[i]);
+            row[i].add(headerLabel[i]);
+            row[i].add(header[i]);
+            add(row[i]);
+        }
+
+
     }
 
 
