@@ -2,7 +2,9 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.IOException;
 import java.net.MalformedURLException;
+import java.net.URLConnection;
 
 public class PageData extends JFrame implements ActionListener, Runnable {
     Thread runner;
@@ -103,7 +105,29 @@ public class PageData extends JFrame implements ActionListener, Runnable {
         }
     }
 
+    public void run() {
+        URLConnection conn;
+        try {
+            conn = this.page.openConnection();
+            conn.connect();
+            status.setText("Connection opened . . .");
+            for (int i = 0; i < 7; i ++)
+                header[i].setText(conn.getHeaderField(headers[i]));
+            quitLoading.setEnabled(false);
+            clearPage.setEnabled(true);
+            status.setText("Done");
+            runner = null;
+        }
+        catch (IOException e) {
+            status.setText("IO Error: " + e.getMessage());
+        }
+    }
 
-
-
+    private static void setLookAndFeel() {
+        try {
+            UIManager.setLookAndFeel("com.sun.java.swing.plaf.nimbus.NimbusLookAndFeel");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
 }
