@@ -12,6 +12,12 @@ public class FutureValueApp {
 class FutureValueFrame extends JFrame {
     public FutureValueFrame() {
         setTitle("Future Value Calculator");
+        setSize(267, 200);
+        centerWindow(this);
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        JPanel panel = new FutureValuePanel();
+        this.add(panel);
     }
 }
 
