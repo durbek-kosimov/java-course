@@ -13,7 +13,7 @@ public class FutureValueApp {
 class FutureValueFrame extends JFrame {
     public FutureValueFrame() {
         setTitle("Future Value Calculator");
-        setSize(267, 200);
+        setSize(300, 200);
         centerWindow(this);
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -39,35 +39,35 @@ class FutureValuePanel extends JPanel implements ActionListener {
         displayPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 
 //        payment label
-        JLabel paymentLabel = new JLabel("Monthly Payment:");
+        paymentLabel = new JLabel("Monthly Payment:");
         displayPanel.add(paymentLabel);
 
 //        payment label
-        JTextField paymentTextField = new JTextField(10);
+        paymentTextField = new JTextField(10);
         displayPanel.add(paymentTextField);
 
 //        rate label
-        JLabel rateLabel = new JLabel("Yearly Interest Rate:");
+        rateLabel = new JLabel("Yearly Interest Rate:");
         displayPanel.add(rateLabel);
 
 //        rate text field
-        JTextField rateTextField = new JTextField(10);
+        rateTextField = new JTextField(10);
         displayPanel.add(rateTextField);
 
 //        years label
-        JLabel yearsLabel = new JLabel("Number of Years:");
+        yearsLabel = new JLabel("Number of Years:");
         displayPanel.add(yearsLabel);
 
 //        years text field
-        JTextField yearsTextField = new JTextField(10);
+        yearsTextField = new JTextField(10);
         displayPanel.add(yearsTextField);
 
 //        future value label
-        JLabel futureValueLabel = new JLabel("Future Value");
+        futureValueLabel = new JLabel("Future Value");
         displayPanel.add(futureValueLabel);
 
 //        future value text field
-        JTextField futureValueTextField = new JTextField(10);
+        futureValueTextField = new JTextField(10);
         futureValueTextField.setEditable(false);
         futureValueTextField.setFocusable(false);
         displayPanel.add(futureValueTextField);
@@ -77,12 +77,12 @@ class FutureValuePanel extends JPanel implements ActionListener {
         buttonPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
 
 //        calculate buttons
-        JButton calculateButton = new JButton("Calculate");
+        calculateButton = new JButton("Calculate");
         calculateButton.addActionListener(this);
         buttonPanel.add(calculateButton);
 
 //        exit button
-        JButton exitButton = new JButton("Exit");
+        exitButton = new JButton("Exit");
         exitButton.addActionListener(this);
         buttonPanel.add(exitButton);
 
