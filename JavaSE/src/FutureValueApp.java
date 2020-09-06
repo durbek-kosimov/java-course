@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -18,6 +19,12 @@ class FutureValueFrame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         JPanel panel = new FutureValuePanel();
         this.add(panel);
+    }
+
+    private void centerWindow(Window window) {
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        Dimension d = tk.getScreenSize();
+        setLocation((d.width - window.getWidth()) / 2, (d.height - window.getHeight()) / 2);
     }
 }
 
