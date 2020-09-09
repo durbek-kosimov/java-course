@@ -42,6 +42,7 @@ public class PaymentPanel extends JPanel implements ActionListener {
         cardTypeLabel = new JLabel("Card type:");
         add(cardTypeLabel, getConstraints(0, 1, 1, 1, GridBagConstraints.EAST));
 
+//        card type list
         String[] cardNames = {"Visa", "Master Card", "American Express", "Other"};
         cardTypeList = new JList(cardNames);
         cardTypeList.setFixedCellWidth(170);
@@ -50,19 +51,23 @@ public class PaymentPanel extends JPanel implements ActionListener {
         JScrollPane cardTypeScrollPane = new JScrollPane(cardTypeList);
         add(cardTypeScrollPane, getConstraints(1,1,2,1, GridBagConstraints.WEST));
 
+//        card number label
         cardNumberLabel = new JLabel("Card number:");
         add(cardNumberLabel, getConstraints(0,2,1,1, GridBagConstraints.EAST));
 
+//        card number text field
         cardNumberTextField = new JTextField(15);
         add(cardNumberTextField, getConstraints(1,2,2,1, GridBagConstraints.WEST));
 
+//        expiration date label
         expirationDateLabel = new JLabel("Expiration date:");
         add(expirationDateLabel, getConstraints(0,3,1,1, GridBagConstraints.EAST));
 
+//        month combo box
         String[] months = {"January", "February", "March", "April", "May", "June", "July", "Avgust", "September",
                            "October", "November", "December"};
         monthComboBox = new JComboBox(months);
-        add(monthComboBox, getConstraints(2,3,1,1, GridBagConstraints.WEST));
+        add(monthComboBox, getConstraints(1,3,1,1, GridBagConstraints.WEST));
 
         String[] years = {"2015", "2016", "2017", "2018", "2019", "2020"};
         yearComboBox = new JComboBox(years);
