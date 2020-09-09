@@ -18,7 +18,7 @@ class FutureValueFrame extends JFrame {
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         JPanel panel = new FutureValuePanel();
-        this.add(panel);
+        add(panel);
     }
 
     private void centerWindow(Window w) {
@@ -87,9 +87,9 @@ class FutureValuePanel extends JPanel implements ActionListener {
         buttonPanel.add(exitButton);
 
 //        add panels to main panel
-        this.setLayout(new BorderLayout());
-        this.add(displayPanel, BorderLayout.CENTER);
-        this.add(buttonPanel, BorderLayout.SOUTH);
+        setLayout(new BorderLayout());
+        add(displayPanel, BorderLayout.CENTER);
+        add(buttonPanel, BorderLayout.SOUTH);
     }
 
     public void actionPerformed(ActionEvent e) {
