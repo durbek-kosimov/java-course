@@ -16,17 +16,24 @@ public class PaymentPanel extends JPanel implements ActionListener {
 
     public PaymentPanel() {
         setLayout(new GridBagLayout());
-        Border lowerBorder = BorderFactory.createBevelBorder(BevelBorder.LOWERED);
+        Border loweredBorder = BorderFactory.createBevelBorder(BevelBorder.LOWERED);
 
+//        radio button panel
         JPanel radioPanel = new JPanel();
         ButtonGroup billingGroup = new ButtonGroup();
         radioPanel.setLayout(new FlowLayout(FlowLayout.LEFT));
-        radioPanel.setBorder(BorderFactory.createTitledBorder(lowerBorder, "Billing:"));
+        radioPanel.setBorder(BorderFactory.createTitledBorder(loweredBorder, "Billing:"));
 
+//        credit card radio button
         creditCardRadioButton = new JRadioButton("Credit card", true);
         creditCardRadioButton.addActionListener(this);
         billingGroup.add(creditCardRadioButton);
         radioPanel.add(creditCardRadioButton);
+
+//        bill customer radio button
+        billCustomerRadioButton = new JRadioButton("Bill customer");
+        billCustomerRadioButton.addActionListener(this);
+        billingGroup.add(billCustomerRadioButton);
 
         add(radioPanel, getConstraints(0, 0, 3, 1, GridBagConstraints.WEST));
 

@@ -14,6 +14,6 @@ public class PaymentFrame extends JFrame {
     private void centerWindow(Window w) {
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension d = tk.getScreenSize();
-        setLocation((d.width-w.getWidth())/2, (d.height-w.getHeight())/2);
+        setLocation((d.width - w.getWidth())/2, (d.height - w.getHeight())/2);
     }
 }
