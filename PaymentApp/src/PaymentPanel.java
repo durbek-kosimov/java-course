@@ -69,22 +69,27 @@ public class PaymentPanel extends JPanel implements ActionListener {
         monthComboBox = new JComboBox(months);
         add(monthComboBox, getConstraints(1,3,1,1, GridBagConstraints.WEST));
 
-        String[] years = {"2015", "2016", "2017", "2018", "2019", "2020"};
+//        year combo box
+        String[] years = {"2018", "2019", "2020", "2021", "2022", "2023"};
         yearComboBox = new JComboBox(years);
         add(yearComboBox, getConstraints(2,3,1,1, GridBagConstraints.WEST));
 
+//        verified check box
         verifiedCheckBox = new JCheckBox("Verified");
         add(verifiedCheckBox, getConstraints(1,4,1,1, GridBagConstraints.WEST));
 
+//        accept button
         acceptButton = new JButton("Accept");
         acceptButton.addActionListener(this);
         add(acceptButton, getConstraints(1,5,1,1, GridBagConstraints.EAST));
 
+//        exit button
         exitButton = new JButton("Exit");
         exitButton.addActionListener(this);
         add(exitButton, getConstraints(2,5,1,1, GridBagConstraints.CENTER));
     }
 
+//    a method for setting grid bag constraints
     private GridBagConstraints getConstraints(int gridx, int gridy, int gridwidth, int gridheight, int anchor) {
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(5,5,5,5);
