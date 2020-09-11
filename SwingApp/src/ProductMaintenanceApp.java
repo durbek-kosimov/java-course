@@ -7,4 +7,15 @@ public class ProductMaintenanceApp {
     }
 }
 
+class ProductMaintenanceFrame extends JFrame {
+    public ProductMaintenanceFrame() {
+        setTitle("Product Display");
+        setResizable(false);
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        this.add(new ProductMaintenancePanel());
+        this.pack();
+        centerWindow(this);
+    }
+}
+
 
