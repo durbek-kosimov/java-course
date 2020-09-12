@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class ProductMaintenanceApp {
     public static void main(String[] args) {
@@ -16,6 +17,14 @@ class ProductMaintenanceFrame extends JFrame {
         this.pack();
         centerWindow(this);
     }
+
+    private void centerWindow(Window w) {
+        Toolkit tk = Toolkit.getDefaultToolkit();
+        Dimension d = tk.getScreenSize();
+        setLocation((d.width - w.getWidth()) / 2, (d.height - w.getHeight()) / 2);
+    }
 }
+
+
 
 
