@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
 
 public class ProductMaintenanceApp {
     public static void main(String[] args) {
@@ -23,6 +24,16 @@ class ProductMaintenanceFrame extends JFrame {
         Dimension d = tk.getScreenSize();
         setLocation((d.width - w.getWidth()) / 2, (d.height - w.getHeight()) / 2);
     }
+}
+
+class ProductMaintenancePanel extends JPanel {
+    ProductDAO productDAO;
+    ArrayList<Product> products;
+    Product newProduct = null;
+
+    ProductSelectorPanel selectorPanel;
+    ProductDisplayPanel productPanel;
+    ProductButtonPanel buttonPanel;
 }
 
 
