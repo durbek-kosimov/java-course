@@ -42,7 +42,12 @@ class ProductMaintenancePanel extends JPanel {
 //        add the panels
         setLayout(new GridBagLayout());
         selectorPanel = new ProductSelectorPanel();
-
+        add(selectorPanel, getConstraints(0, 0, 1, 1, GridBagConstraints.EAST));
+        productPanel = new ProductDisplayPanel();
+        add(productPanel, getConstraints(0, 1, 1, 1, GridBagConstraints.EAST));
+        buttonPanel = new ProductButtonPanel();
+        add(buttonPanel, getConstraints(0, 2, 1, 1, GridBagConstraints.EAST));
+//        set the initial product to be displayed
     }
 }
 
