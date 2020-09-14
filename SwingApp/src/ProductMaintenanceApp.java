@@ -34,6 +34,16 @@ class ProductMaintenancePanel extends JPanel {
     ProductSelectorPanel selectorPanel;
     ProductDisplayPanel productPanel;
     ProductButtonPanel buttonPanel;
+
+    public ProductMaintenancePanel() {
+//        fill the products ArrayList
+        productDAO = DAOFactory.getProductDAO();
+        products = productDAO.getProducts();
+//        add the panels
+        setLayout(new GridBagLayout());
+        selectorPanel = new ProductSelectorPanel();
+
+    }
 }
 
 
