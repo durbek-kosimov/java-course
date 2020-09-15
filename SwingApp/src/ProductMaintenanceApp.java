@@ -48,6 +48,8 @@ class ProductMaintenancePanel extends JPanel {
         buttonPanel = new ProductButtonPanel();
         add(buttonPanel, getConstraints(0, 2, 1, 1, GridBagConstraints.EAST));
 //        set the initial product to be displayed
+        productPanel.showProduct(products.get(0));
+        selectorPanel.selectProduct(products.get(0));
     }
 }
 
