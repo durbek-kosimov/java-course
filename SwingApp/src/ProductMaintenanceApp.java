@@ -51,6 +51,20 @@ class ProductMaintenancePanel extends JPanel {
         productPanel.showProduct(products.get(0));
         selectorPanel.selectProduct(products.get(0));
     }
+
+//    a method for setting grid bag constraints
+    private GridBagConstraints getConstraints(int gridx, int gridy, int gridthwidth, int gridheight, int anchor) {
+        GridBagConstraints c = new GridBagConstraints();
+        c.insets = new Insets(5, 5, 5, 5);
+        c.ipadx = 0;
+        c.ipady = 0;
+        c.gridx = gridx;
+        c.gridy = gridy;
+        c.gridwidth = gridthwidth;
+        c.gridheight = gridheight;
+        c.anchor = anchor;
+        return c;
+    }
 }
 
 
