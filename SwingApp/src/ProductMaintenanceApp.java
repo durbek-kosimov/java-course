@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
 public class ProductMaintenanceApp {
@@ -67,6 +68,14 @@ class ProductMaintenancePanel extends JPanel {
     }
 }
 
+class ProductSelectorPanel extends JPanel implements ActionListener {
+    public JComboBox productComboBox;
+    private JLabel productLabel;
+    boolean filling = false;
+
+
+
+}
 
 
 
