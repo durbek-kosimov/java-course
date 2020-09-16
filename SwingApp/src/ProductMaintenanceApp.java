@@ -73,7 +73,13 @@ class ProductSelectorPanel extends JPanel implements ActionListener {
     private JLabel productLabel;
     boolean filling = false;
 
+    public ProductMaintenancePanel() {
+//        ser panel layout
+        setLayout(new FlowLayout(FlowLayout.LEFT));
 
+//        product label
+
+    }
 
 }
 
