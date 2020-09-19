@@ -78,7 +78,10 @@ class ProductSelectorPanel extends JPanel implements ActionListener {
         setLayout(new FlowLayout(FlowLayout.LEFT));
 
 //        product label
+        productLabel = new JLabel("Select Product:");
+        add(productLabel);
 
+//        product combo box
     }
 
 }
