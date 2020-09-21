@@ -108,6 +108,10 @@ class ProductSelectorPanel extends JPanel implements ActionListener {
         productComboBox.setSelectedItem(p);
     }
 
+    public Product getCurrentProduct() {
+        return (Product) productComboBox.getSelectedItem();
+    }
+
 }
 
 
