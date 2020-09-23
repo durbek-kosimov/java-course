@@ -111,7 +111,19 @@ class ProductSelectorPanel extends JPanel implements ActionListener {
     public Product getCurrentProduct() {
         return (Product) productComboBox.getSelectedItem();
     }
+}
 
+class ProductDısplayPanel extends JPanel {
+    public TextField codeTextField,
+                     descriptionTextField,
+                     priceTextField;
+    private JLabel codeLabel,
+                   descriptionPanel,
+                   pricePanel;
+
+    public ProductDısplayPanel() {
+//        set panel layout
+    }
 }
 
 
