@@ -123,6 +123,8 @@ class ProductDısplayPanel extends JPanel {
 
     public ProductDısplayPanel() {
 //        set panel layout
+        setLayout(new GridBagLayout());
+
     }
 }
 
