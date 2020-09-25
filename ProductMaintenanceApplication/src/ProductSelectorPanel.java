@@ -20,5 +20,10 @@ public class ProductSelectorPanel extends JPanel implements ActionListener {
         add(productComboBox);
     }
 
-
+    public void actionPerformed(ActiveEvent event) {
+        if (!filling) {
+            Product p = (Product) productComboBox.getSelectedItem();
+            productPanel.showProduct(p);
+        }
+    }
 }
