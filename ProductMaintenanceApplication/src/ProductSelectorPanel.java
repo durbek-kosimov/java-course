@@ -13,6 +13,12 @@ public class ProductSelectorPanel extends JPanel implements ActionListener {
 //        product label
         productLabel = new JLabel("Select Product:");
         add(productLabel);
+//        product combo box
+        productComboBox = new JComboBox();
+        fillComboBox(products);
+        productComboBox.addActionListener(this);
+        add(productComboBox);
     }
+
 
 }
