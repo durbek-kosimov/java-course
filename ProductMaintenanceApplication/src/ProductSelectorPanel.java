@@ -45,4 +45,10 @@ public class ProductSelectorPanel extends JPanel implements ActionListener {
     }
 }
 
+class ProductDisplayPanel extends JPanel {
+    public JTextField codeTextField, descriptionTextField, priceTextField;
+    private JLabel codeLabel, descriptionLabel, priceLabel;
 
+
+
+}
