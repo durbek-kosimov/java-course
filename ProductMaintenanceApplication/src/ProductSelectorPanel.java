@@ -49,6 +49,9 @@ class ProductDisplayPanel extends JPanel {
     public JTextField codeTextField, descriptionTextField, priceTextField;
     private JLabel codeLabel, descriptionLabel, priceLabel;
 
-
+    public ProductDisplayPanel() {
+//        set panel layout
+        setLayout(new GridBagLayout());
+    }
 
 }
