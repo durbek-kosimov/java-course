@@ -52,6 +52,12 @@ class ProductDisplayPanel extends JPanel {
     public ProductDisplayPanel() {
 //        set panel layout
         setLayout(new GridBagLayout());
+
+//        code label
+        codeLabel = new JLabel("Product Code:");
+        add(codeLabel, getConstraints(0, 0, 1, 1, GridBagConstraints.EAST));
+
+
     }
 
 }
