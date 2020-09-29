@@ -57,7 +57,12 @@ class ProductDisplayPanel extends JPanel {
         codeLabel = new JLabel("Product Code:");
         add(codeLabel, getConstraints(0, 0, 1, 1, GridBagConstraints.EAST));
 
-
+//      code text field
+        codeTextField = new JTextField(10);
+        codeTextField.setEditable(false);
+        codeTextField.setFocusable(false);
+        codeTextField.addFocusListener(new AutoSelect());
+        add(codeTextField, getConstraints(1, 0, 1, 1, GridBagConstraints.WEST));
     }
 
 }
