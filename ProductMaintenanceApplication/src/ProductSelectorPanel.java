@@ -71,6 +71,13 @@ class ProductDisplayPanel extends JPanel {
 //        description label
         descriptionLabel = new JLabel("Description:");
         add(descriptionLabel, getConstraints(0, 1, 1, 1, GridBagConstraints.EAST));
+
+//        description text field
+        descriptionTextField = new JTextField(30);
+        descriptionTextField.setEditable(false);
+        descriptionTextField.setFocusable(false);
+        descriptionTextField.addFocusListener(new AutoSelect());
+        add(descriptionTextField, getConstraints(1, 1, 1, 1, GridBagConstraints.WEST));
     }
 
 }
