@@ -68,7 +68,9 @@ class ProductDisplayPanel extends JPanel {
         descriptionLabel = new JLabel("Description:");
         add(descriptionLabel, getConstraints(0, 1, 1, 1, GridBagConstraints.EAST));
 
-
+//        description label
+        descriptionLabel = new JLabel("Description:");
+        add(descriptionLabel, getConstraints(0, 1, 1, 1, GridBagConstraints.EAST));
     }
 
 }
