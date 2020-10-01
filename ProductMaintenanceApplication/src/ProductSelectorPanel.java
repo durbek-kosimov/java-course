@@ -82,6 +82,14 @@ class ProductDisplayPanel extends JPanel {
 //        price label
         priceLabel = new JLabel("Unit Price:");
         add(priceLabel, getConstraints(0, 2, 1, 1, GridBagConstraints.EAST));
+
+//        price text field
+        priceTextField = new JTextField(10);
+        priceTextField.setEditable(false);
+        priceTextField.setFocusable(false);
+        priceTextField.addFocusListener(new AutoSelect());
+        priceTextField.addKeyListener(new NumFilter());
+        add(priceTextField, getConstraints(1, 2, 1, 1, GridBagConstraints.WEST));
     }
 
 }
