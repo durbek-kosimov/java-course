@@ -92,4 +92,9 @@ class ProductDisplayPanel extends JPanel {
         add(priceTextField, getConstraints(1, 2, 1, 1, GridBagConstraints.WEST));
     }
 
+    public void showProduct (Product p) {
+        codeTextField.setText(p.getCode());
+        descriptionTextField.setText("");
+        priceTextField.setText("");
+    }
 }
