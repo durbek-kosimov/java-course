@@ -101,6 +101,15 @@ class ProductDisplayPanel extends JPanel {
     public void clearField() {
         codeTextField.setText("");
         descriptionTextField.setText("");
-        priceTextField.setText("");
+        priceTextField.setText(" ");
+    }
+
+// return a Product object with data in the text fields
+    public Product getProduct() {
+        Product p = new Product();
+        p.setCode(codeTextField.getText());
+        p.setDescription(descriptionTextField.getText());
+        p.setPrice(Double.parseDouble(priceTextField.getText()));
+        return p;
     }
 }
