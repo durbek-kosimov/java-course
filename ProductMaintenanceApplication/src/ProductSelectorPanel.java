@@ -112,4 +112,14 @@ class ProductDisplayPanel extends JPanel {
         p.setPrice(Double.parseDouble(priceTextField.getText()));
         return p;
     }
+
+    public void setAddMode() {
+        codeTextField.setEditable(true);
+        codeTextField.setFocusable(true);
+        codeTextField.requestFocusInWindow();
+        descriptionTextField.setEditable(true);
+        descriptionTextField.setFocusable(true);
+        priceTextField.setEditable(true);
+        priceTextField.setFocusable(true);
+    }
 }
