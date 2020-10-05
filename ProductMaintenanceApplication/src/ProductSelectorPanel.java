@@ -140,3 +140,15 @@ class ProductDisplayPanel extends JPanel {
         priceTextField.setFocusable(false);
     }
 }
+
+class ProductButtonPanel extends JPanel {
+    public JButton addButton, editButton, deleteButton, acceptButton, cancelButton, exitButton;
+
+    public ProductButtonPanel() {
+//        create maintenance button panel
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
+
+
+    }
+}
