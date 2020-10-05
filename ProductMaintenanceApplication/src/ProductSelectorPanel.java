@@ -149,6 +149,9 @@ class ProductButtonPanel extends JPanel {
         JPanel mainPanel = new JPanel();
         mainPanel.setLayout(new FlowLayout(FlowLayout.CENTER));
 
-
+//      add button
+        addButton = new JButton("Add");
+        addButton.addActionListener(new AddListener());
+        mainPanel.add(addButton);
     }
 }
