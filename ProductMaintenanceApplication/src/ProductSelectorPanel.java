@@ -153,5 +153,10 @@ class ProductButtonPanel extends JPanel {
         addButton = new JButton("Add");
         addButton.addActionListener(new AddListener());
         mainPanel.add(addButton);
+
+//        edit button
+        editButton = new JButton("Edit");
+        editButton.addActionListener(new EditListener());
+        mainPanel.add(editButton);
     }
 }
