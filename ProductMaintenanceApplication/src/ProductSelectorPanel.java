@@ -163,5 +163,11 @@ class ProductButtonPanel extends JPanel {
         deleteButton = new JButton("Delete");
         deleteButton.addActionListener(new DeleteListener());
         mainPanel.add(deleteButton);
+
+//        accept button
+        acceptButton = new JButton("Accept");
+        acceptButton.setEnabled(false);
+        acceptButton.addActionListener(new AcceptListener);
+        mainPanel.add(acceptButton);
     }
 }
