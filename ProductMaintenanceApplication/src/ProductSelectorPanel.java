@@ -167,7 +167,13 @@ class ProductButtonPanel extends JPanel {
 //        accept button
         acceptButton = new JButton("Accept");
         acceptButton.setEnabled(false);
-        acceptButton.addActionListener(new AcceptListener);
+        acceptButton.addActionListener(new AcceptListener());
         mainPanel.add(acceptButton);
+
+//        cancel button
+        cancelButton = new JButton("Cancel");
+        cancelButton.setEnabled(false);
+        cancelButton.addActionListener(new CancelListener());
+        mainPanel.add(cancelButton);
     }
 }
