@@ -175,5 +175,9 @@ class ProductButtonPanel extends JPanel {
         cancelButton.setEnabled(false);
         cancelButton.addActionListener(new CancelListener());
         mainPanel.add(cancelButton);
+
+//        create exit button panel
+        JPanel exitPanel = new JPanel();
+        exitPanel.setLayout(new FlowLayout(FlowLayout.RIGHT));
     }
 }
