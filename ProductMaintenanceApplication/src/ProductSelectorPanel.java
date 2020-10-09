@@ -182,7 +182,14 @@ class ProductButtonPanel extends JPanel {
 
 //        exit button
         exitButton = new JButton("Exit");
-        exitButton.addActionListener(new ExitListener);
-        exitPanel.add(exitPanel);
+        exitButton.addActionListener(new ExitListener());
+        exitPanel.add(editButton);
+
+//        add panels to the ProductButtonPanel
+        setLayout(new BorderLayout());
+        add(mainPanel, BorderLayout.CENTER);
+        add(exitPanel, BorderLayout.SOUTH);
     }
+
+
 }
