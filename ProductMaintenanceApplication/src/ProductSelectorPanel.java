@@ -191,5 +191,11 @@ class ProductButtonPanel extends JPanel {
         add(exitPanel, BorderLayout.SOUTH);
     }
 
-
+    public void setAddEditMode(boolean e) {
+        addButton.setEnabled(!e);
+        editButton.setEnabled(!e);
+        deleteButton.setEnabled(!e);
+        acceptButton.setEnabled(e);
+        cancelButton.setEnabled(e);
+    }
 }
