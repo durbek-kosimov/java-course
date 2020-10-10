@@ -209,3 +209,11 @@ class AddListener implements ActionListener {
         productPanel.setAddMode();
     }
 }
+
+class EditListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+        buttonPanel.setAddEditMode(true);
+        productPanel.setEditMode();
+    }
+}
+
