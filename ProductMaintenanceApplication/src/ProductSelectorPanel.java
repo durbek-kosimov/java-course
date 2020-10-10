@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
@@ -197,5 +198,14 @@ class ProductButtonPanel extends JPanel {
         deleteButton.setEnabled(!e);
         acceptButton.setEnabled(e);
         cancelButton.setEnabled(e);
+    }
+}
+
+class AddListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+        newProduct = new Product();
+        productPanel.clearFields();
+        buttonPanel.setAddEditMode(true);
+        productPanel.setAddMode();
     }
 }
