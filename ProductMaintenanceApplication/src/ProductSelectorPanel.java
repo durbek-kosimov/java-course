@@ -229,3 +229,20 @@ class DeleteListener implements ActionListener {
     }
 }
 
+class AcceptListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+        if (isValidData()) {
+            if (newProduct != null) {
+                newProduct = productPanel.getProduct();
+                productDAO.addProduct(newProduct);
+                products.add(newProduct);
+                selectorPanel.fillComboBox(products);
+                selectorPanel.selectProduct(newProduct);
+                newProduct = null;
+            }
+            else {
+
+            }
+        }
+    }
+}
