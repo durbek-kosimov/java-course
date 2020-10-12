@@ -239,8 +239,7 @@ class AcceptListener implements ActionListener {
                 selectorPanel.fillComboBox(products);
                 selectorPanel.selectProduct(newProduct);
                 newProduct = null;
-            }
-            else {
+            } else {
                 Product p = selectorPanel.getCurrentProduct();
                 Product newProduct = productPanel.getProduct();
                 p.setDescription(newProduct.getDescription());
@@ -250,7 +249,9 @@ class AcceptListener implements ActionListener {
                 selectorPanel.selectProduct(p);
                 productPanel.showProduct(selectorPanel.getCurrentProduct());
             }
-
+            productPanel.setDisplayMode();
+            buttonPanel.setAddEditMode(false);
+            selectorPanel.productComboBox.requestFocusInWindow();
         }
     }
 }
