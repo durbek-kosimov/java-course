@@ -241,8 +241,16 @@ class AcceptListener implements ActionListener {
                 newProduct = null;
             }
             else {
-
+                Product p = selectorPanel.getCurrentProduct();
+                Product newProduct = productPanel.getProduct();
+                p.setDescription(newProduct.getDescription());
+                p.setPrice(newProduct.getPrice());
+                prductDAO.updateProduct(p);
+                selectorPanel.fillComboBox(products);
+                selectorPanel.selectProduct(p);
+                productPanel.showProduct(selectorPanel.getCurrentProduct());
             }
+
         }
     }
 }
