@@ -258,8 +258,13 @@ class AcceptListener implements ActionListener {
     public boolean isValidData() {
         if (newProduct != null)
             return SwingValidator.isPresent(productPanel.codeTextField, "Product Code")
-                && SwingValidator.isPresent(productPanel.descriptionTextField, "Description")
-                && SwingValidator.isPresent(productPanel.priceTextField, "Unit Price")
-                && SwingValidator.isDouble(prodcutPanel.priceTextField, "Unit Price");
+                    && SwingValidator.isPresent(productPanel.descriptionTextField, "Description")
+                    && SwingValidator.isPresent(productPanel.priceTextField, "Unit Price")
+                    && SwingValidator.isDouble(prodcutPanel.priceTextField, "Unit Price");
+        else
+            return SwingValidator.isPresent(productPanel.descriptionTextField, "Description")
+                    && SwingValidator.isPresent(productPanel.priceTextField, "Unit Price")
+                    && SwingValidator.isDouble(prodcutPanel.priceTextField, "Unit Price");
+
     }
 }
