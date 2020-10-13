@@ -254,4 +254,12 @@ class AcceptListener implements ActionListener {
             selectorPanel.productComboBox.requestFocusInWindow();
         }
     }
+
+    public boolean isValidData() {
+        if (newProduct != null)
+            return SwingValidator.isPresent(productPanel.codeTextField, "Product Code")
+                && SwingValidator.isPresent(productPanel.descriptionTextField, "Description")
+                && SwingValidator.isPresent(productPanel.priceTextField, "Unit Price")
+                && SwingValidator.isDouble(prodcutPanel.priceTextField, "Unit Price");
+    }
 }
