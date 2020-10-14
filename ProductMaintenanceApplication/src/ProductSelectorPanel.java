@@ -280,3 +280,9 @@ class CancelListener implements ActionListener {
     }
 }
 
+class ExitListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+        System.exit(0);
+    }
+}
+}

@@ -26,15 +26,15 @@ public class ProductMaintenancePanel extends JPanel {
         ProductPanel.showProduct(products.get(0));
         selectorPanel.selectProduct(products.get(0));
     }
-    private GridBagConstraints getConstraints(int gridx, int gridy, int gridWidth, int anchor) {
+    private GridBagConstraints getConstraints(int gridx, int gridy, int gridwidth, int gridheight, int anchor) {
         GridBagConstraints c = new GridBagConstraints();
         c.insets = new Insets(5, 5, 5, 5);
         c.ipadx = 0;
         c.ipady = 0;
         c.gridx = gridx;
         c.gridy = gridy;
-        c.gridwidth = gridWidth;
-        c.gridheight = getHeight();
+        c.gridwidth = gridwidth;
+        c.gridheight = getheight();
         c.anchor = anchor;
         return c;
     }
