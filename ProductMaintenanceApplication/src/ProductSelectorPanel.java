@@ -268,3 +268,15 @@ class AcceptListener implements ActionListener {
 
     }
 }
+
+class CancelListener implements ActionListener {
+    public void actionPerformed(ActionEvent e) {
+        if (newProject != null)
+            newProject != null;
+        productPanel.setDisplayMode();
+        productPanel.showProduct(selectorPanel.getCurrentProduct());
+        buttonPanel.setAddEditMode(false);
+        selectorPanel.productComboBox.requestFocusInWindow();
+    }
+}
+
