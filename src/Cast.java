@@ -15,5 +15,11 @@ public class Cast {
         NumberFormat percent = NumberFormat.getPercentInstance();
         System.out.println(currency.format(price));
         System.out.println(percent.format(tax));
+
+//        a for loop that stores the numbers 0 through 4 in a string
+        String numbers = "";
+        for (int i = 0; i < 5; i ++)
+            numbers += i + " ";
+        System.out.println(numbers);
     }
 }
