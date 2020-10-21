@@ -2,6 +2,11 @@ public class Swap {
     public static void main(String[] args) {
         Animal lion = new Animal("Lion");
         System.out.println(lion);
+        modifyer(lion);
+        System.out.println(lion);
+    }
+    public static void modifyer(Animal a) {
+        a.setName("Tiger");
     }
 }
 
@@ -17,7 +22,11 @@ class Animal {
         return name;
     }
 
-//    public String toString() {
+        public void setName(String name) {
+        this.name = name;
+    }
+
+    //    public String toString() {
 //        return super.toString();
 //    }
 }
