@@ -1,9 +1,12 @@
 import java.text.NumberFormat;
+import java.util.Scanner;
 
 public class Cast {
     public static void main(String[] args) {
         char letterChar = 65;
         int letterInt = 'A';
+        Scanner sc = new Scanner(System.in);
+        int x = ValidateAnEntry.getInteger(sc, "Enter integer: ");
         System.out.println(letterChar);
         System.out.println((char) 65);
         System.out.println(letterInt);

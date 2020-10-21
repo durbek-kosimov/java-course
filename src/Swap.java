@@ -6,6 +6,7 @@ public class Swap {
         System.out.println(lion);
     }
     public static void modifyer(Animal a) {
+        System.out.println(a.getName());
         a.setName("Tiger");
     }
 }
@@ -22,7 +23,11 @@ class Animal {
         return name;
     }
 
-        public void setName(String name) {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
     }
 
