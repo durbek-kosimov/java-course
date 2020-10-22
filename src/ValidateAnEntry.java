@@ -30,7 +30,7 @@ public class ValidateAnEntry {
         return d;
     }
 
-    public static double getDoubleWithinRange(Scanner sc, String prompt, double min, double max) {
+    public static double getDouble(Scanner sc, String prompt, double min, double max) {
         double d = 0.0;
         boolean isValid = false;
         while (isValid == false) {
@@ -45,7 +45,7 @@ public class ValidateAnEntry {
         return d;
     }
 
-    public static int getInteger(Scanner sc, String prompt) {
+    public static int getInt(Scanner sc, String prompt) {
         int i = 0;
         boolean isValid = false;
         while (isValid == false) {
@@ -61,7 +61,7 @@ public class ValidateAnEntry {
         return i;
     }
 
-    public static int getIntegerWithinRange(Scanner sc, String prompt, int min, int max) {
+    public static int getInt(Scanner sc, String prompt, int min, int max) {
         int i = 0;
         boolean isValid = false;
         while (isValid == false) {
