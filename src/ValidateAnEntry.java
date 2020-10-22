@@ -7,6 +7,12 @@ public class ValidateAnEntry {
         double subtotal2 = getDoubleWithinRange(scanner, "Enter subtotal: ", 0, 10000);
     }
 
+    public static String getString(Scanner sc, String prompt) {
+        System.out.println(prompt);
+        String s = sc.next();
+        sc.nextLine();
+        return s;
+    }
 
     public static double getDouble(Scanner sc, String prompt) {
         double d = 0.0;
