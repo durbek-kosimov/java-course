@@ -4,7 +4,7 @@ public class ValidateAnEntry {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double subtotal1 = getDouble(scanner, "Enter subtotal: ");
-        double subtotal2 = getDoubleWithinRange(scanner, "Enter subtotal: ", 0, 10000);
+        double subtotal2 = getDouble(scanner, "Enter subtotal: ", 0, 10000);
     }
 
     public static String getString(Scanner sc, String prompt) {
@@ -65,7 +65,7 @@ public class ValidateAnEntry {
         int i = 0;
         boolean isValid = false;
         while (isValid == false) {
-            i = getInteger(sc, prompt);
+            i = getInt(sc, prompt);
             if (i <= min)
                 System.out.println("Error! Number must be greater than " + min + ".");
             else if (i >= max)
