@@ -3,7 +3,7 @@ class AnimalTest {
         Animal cat = new Cat("Minush", 5);
         System.out.println(cat.toString());
         Class c = cat.getClass();
-        System.out.println(c);
+        System.out.println(c.getName());
     }
 
     public static class Animal {
