@@ -2,6 +2,8 @@ class AnimalTest {
     public static void main(String[] args) {
         Animal cat = new Cat("Minush", 5);
         System.out.println(cat.toString());
+        Class c = cat.getClass();
+        System.out.println(c);
     }
 
     public static class Animal {
