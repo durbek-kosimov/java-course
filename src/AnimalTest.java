@@ -1,8 +1,6 @@
-
-
 class AnimalTest {
     public static void main(String[] args) {
-        Cat cat = new Cat("Minush", 5);
+        Animal cat = new Cat("Minush", 5);
         System.out.println(cat.toString());
     }
 
@@ -21,14 +19,11 @@ class AnimalTest {
 
         public Cat(String name, int age) {
             super(name, age);
-
         }
 
         @Override
         public String toString() {
-            return super.toString();
+            return "I'm cat";
         }
-
-
     }
 }
