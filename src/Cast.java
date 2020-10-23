@@ -6,7 +6,7 @@ public class Cast {
         char letterChar = 65;
         int letterInt = 'A';
         Scanner sc = new Scanner(System.in);
-        int x = ValidateAnEntry.getInteger(sc, "Enter integer: ");
+        int x = ValidateAnEntry.getInt(sc, "Enter integer: ");
         System.out.println(letterChar);
         System.out.println((char) 65);
         System.out.println(letterInt);
