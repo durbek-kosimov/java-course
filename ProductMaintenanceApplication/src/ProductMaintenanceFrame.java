@@ -1,11 +1,11 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class ProductMaintenanceFrame extends Frame {
+public class ProductMaintenanceFrame extends JFrame {
     public ProductMaintenanceFrame() {
         setTitle("Product Display");
         setResizable(false);
-        setDefaultCloseOperator(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.add(new ProductMaintenanceFrame());
         this.pack();
         centerWindow(this);
