@@ -1,4 +1,5 @@
 import java.io.File;
+import java.io.IOException;
 
 public class ProductTextFile implements ProductDAO {
     private File productsFile = null;
@@ -8,5 +9,8 @@ public class ProductTextFile implements ProductDAO {
         productsFile = new File("products.txt");
     }
 
-
+    private void checkFile() throws IOException {
+        if (!productsFile.exists())
+            productsFile.createNewFile();
+    }
 }
