@@ -72,4 +72,13 @@ public class ProductTextFile implements ProductDAO {
             ioe.printStackTrace();
         }
     }
+
+    public Product getProduct(String code) {
+        ArrayList<Product> products = this.getProducts();
+        for (Product p : products) {
+            if (p.getCode().equals(code))
+                return p;
+        }
+        return null;
+    }
 }
