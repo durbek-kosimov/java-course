@@ -63,4 +63,13 @@ public class ProductTextFile implements ProductDAO {
         }
     }
 
+    private void close(Closeable stream) {
+        try {
+            if (stream != null)
+                stream.close();
+        }
+        catch (IOException ioe) {
+            ioe.printStackTrace();
+        }
+    }
 }
