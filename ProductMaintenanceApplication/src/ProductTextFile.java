@@ -87,4 +87,10 @@ public class ProductTextFile implements ProductDAO {
         products.add(p);
         return this.saveProducts(products);
     }
+
+    public boolean deleteProduct(Product p) {
+        ArrayList<Product> products = this.getProducts();
+        products.remove(p);
+        return this.saveProducts(products);
+    }
 }
