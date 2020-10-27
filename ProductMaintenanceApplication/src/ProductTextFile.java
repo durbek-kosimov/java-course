@@ -54,6 +54,13 @@ public class ProductTextFile implements ProductDAO {
             }
             return products;
         }
-
+        catch (IOException ioe) {
+            ioe.printStackTrace();
+            return null;
+        }
+        finally {
+            this.close(in);
+        }
     }
+
 }
