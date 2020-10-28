@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-public class ProductMaintenanceFrame extends JFrame {
+class ProductMaintenanceFrame extends JFrame {
     public ProductMaintenanceFrame() {
         setTitle("Product Display");
         setResizable(false);

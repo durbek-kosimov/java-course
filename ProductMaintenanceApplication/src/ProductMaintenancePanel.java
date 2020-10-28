@@ -4,7 +4,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
 
-public class ProductMaintenancePanel extends JPanel {
+class ProductMaintenancePanel extends JPanel {
     ProductDAO productDAO;
     ArrayList<Product> products;
     Product newProduct = null;
@@ -14,9 +14,15 @@ public class ProductMaintenancePanel extends JPanel {
     ProductButtonPanel buttonPanel;
 
     public ProductMaintenancePanel() {
+
         ProductDAO productDAO;
         ArrayList<Product> products;
         Product newProduct = null;
+
+        ProductSelectorPanel selectorPanel;
+        ProductDisplayPanel displayPanel;
+        ProductButtonPanel buttonPanel;
+
 
         setLayout(new GridBagLayout());
         selectorPanel = new ProductSelectorPanel();
