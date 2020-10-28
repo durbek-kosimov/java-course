@@ -23,7 +23,10 @@ class ProductMaintenancePanel extends JPanel {
         ProductDisplayPanel displayPanel;
         ProductButtonPanel buttonPanel;
 
-
+        public ProductMaintenancePanel() {
+            //        fill the products ArrayList
+            productDAO =
+        }
         setLayout(new GridBagLayout());
         selectorPanel = new ProductSelectorPanel();
         add(selectorPanel, getConstraints(0,0,1,1, GridBagConstraints.EAST));
