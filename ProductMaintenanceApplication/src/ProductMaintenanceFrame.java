@@ -6,14 +6,14 @@ public class ProductMaintenanceFrame extends JFrame {
         setTitle("Product Display");
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        this.add(new ProductMaintenanceFrame());
+        this.add(new ProductMaintenancePanel());
         this.pack();
         centerWindow(this);
     }
     private void centerWindow(Window w) {
         Toolkit tk = Toolkit.getDefaultToolkit();
         Dimension d = tk.getScreenSize();
-        setLocation((d.width-w.getWidth()) / 2, (d.height-w.getHeight()) / 2);
+        setLocation((d.width - w.getWidth()) / 2, (d.height - w.getHeight()) / 2);
     }
 }
 
