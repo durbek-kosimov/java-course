@@ -60,6 +60,17 @@ class ProductMaintenancePanel extends JPanel {
             productComboBox.addActionListener(this);
             add(productComboBox);
         }
+
+        public void ActionPerformed(ActionEvent e) {
+            if (!filling) {
+                Product p = (Product) productComboBox.getSelectedItem();
+                productPanel.showProduct(p);
+            }
+        }
+
+        public void fillComboBox(ArrayList<Product> a) {
+
+        }
     }
 
 }
