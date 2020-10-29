@@ -69,7 +69,11 @@ class ProductMaintenancePanel extends JPanel {
         }
 
         public void fillComboBox(ArrayList<Product> a) {
-
+            filling = true;
+            productComboBox.removeAllItems();
+            for (Product p : a)
+                productComboBox.addItem(p);
+            filling = false;
         }
     }
 
