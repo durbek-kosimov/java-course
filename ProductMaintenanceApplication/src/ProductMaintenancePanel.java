@@ -298,4 +298,10 @@ class ProductMaintenancePanel extends JPanel {
             selectorPanel.productComboBox.requestFocusInWindow();
         }
     }
+
+    class ExitListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            System.exit(0);
+        }
+    }
 }
