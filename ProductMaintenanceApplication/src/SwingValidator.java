@@ -21,4 +21,16 @@ public class SwingValidator {
             return false;
         }
     }
+
+    public static boolean isDouble(JTextComponent c, String title) {
+        try {
+            double d = Double.parseDouble(c.getText());
+            return true;
+        }
+        catch (NumberFormatException e) {
+            showMessage(c, title + " must be a valid numer.\n" + "Please re-enter.");
+            c.requestFocusInWindow();
+            return false;
+        }
+    }
 }
