@@ -1,3 +1,4 @@
+import javax.swing.*;
 import javax.swing.text.JTextComponent;
 
 public class SwingValidator {
@@ -32,5 +33,9 @@ public class SwingValidator {
             c.requestFocusInWindow();
             return false;
         }
+    }
+
+    private static void showMessage(JTextComponent c, String message) {
+        JOptionPane.showMessageDialog(c, message, "Invalid Entry", JOptionPane.ERROR_MESSAGE);
     }
 }
