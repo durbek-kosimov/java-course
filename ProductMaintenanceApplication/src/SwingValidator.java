@@ -9,4 +9,16 @@ public class SwingValidator {
         }
         return true;
     }
+
+    public static boolean isInteger(JTextComponent c, String title) {
+        try {
+            int i = Integer.parseInt(c.getText());
+            return true;
+        }
+        catch (NumberFormatException e) {
+            showMessage(c, title + " must be an integer.\n" + "Please re-enter.");
+            c.requestFocusInWindow();
+            return false;
+        }
+    }
 }
