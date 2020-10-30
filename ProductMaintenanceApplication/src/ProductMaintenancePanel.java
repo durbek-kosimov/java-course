@@ -287,4 +287,15 @@ class ProductMaintenancePanel extends JPanel {
                     && SwingValidator.isDouble(productPanel.priceTextField, "Unit Price");
         }
     }
+
+    class CancelListener implements ActionListener {
+        public void actionPerformed(ActionEvent e) {
+            if (newProduct != null)
+                newProduct = null;
+            productPanel.setDisplayMode();
+            productPanel.showProduct(selectorPanel.getCurrentProduct());
+            buttonPanel.setAddEditMode(false);
+            selectorPanel.productComboBox.requestFocusInWindow();
+        }
+    }
 }
