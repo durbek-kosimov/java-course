@@ -249,7 +249,7 @@ class ProductMaintenancePanel extends JPanel {
     }
 
     class AcceptListener implements ActionListener {
-        public void actionPerfermed(ActionEvent e) {
+        public void actionPerformed(ActionEvent e) {
             if (isValidData()) {
                 if (newProduct != null) {
                     newProduct = productPanel.getProduct();
