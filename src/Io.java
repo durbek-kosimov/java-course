@@ -8,7 +8,10 @@ public class Io {
         File pr = new File("/home/dmint/Desktop/pr_02_1.in");
         BufferedReader in = new BufferedReader(new FileReader(pr));
         String line = in.readLine();
-        System.out.println(line);
+        while (line != null) {
+            System.out.println(line);
+            line = in.readLine();
+        }
         in.close();
     }
 }
