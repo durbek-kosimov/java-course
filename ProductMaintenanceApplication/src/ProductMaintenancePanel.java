@@ -47,6 +47,9 @@ class ProductMaintenancePanel extends JPanel {
     class ProductSelectorPanel extends JPanel implements ActionListener {
         public JComboBox productComboBox;
         private JLabel productLabel;
+
+
+
         boolean filling = false; //used to indicate the combo box is being filled
         public ProductSelectorPanel() {
 //            set panel layout
@@ -61,7 +64,7 @@ class ProductMaintenancePanel extends JPanel {
             add(productComboBox);
         }
 
-        public void ActionPerformed(ActionEvent e) {
+        public void actionPerformed(ActionEvent e) {
             if (!filling) {
                 Product p = (Product) productComboBox.getSelectedItem();
                 productPanel.showProduct(p);
@@ -98,6 +101,7 @@ class ProductMaintenancePanel extends JPanel {
 //            code text field
             codeTextField = new JTextField(10);
             codeTextField.setEditable(false);
+            codeTextField.setFocusable(false);
             codeTextField.addFocusListener(new AutoSelect());
             add(codeTextField, getConstraints(1, 0, 1, 1, GridBagConstraints.WEST));
 //            description label
