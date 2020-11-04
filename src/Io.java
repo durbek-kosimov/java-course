@@ -21,17 +21,34 @@ public class Io {
             String[] str = line.split(" +");
             description = line.substring(0, indexOfSpace);
             value = line.substring(indexOfSpace + 1);
-            if (description.equals("initUcell")) {
-                StringTokenizer st = new StringTokenizer(value, " ");
-                while (st.hasMoreTokens()) {
-                    x = st.nextToken();
-                    y = st.nextToken();
-                    z = st.nextToken();
+            StringTokenizer st = new StringTokenizer(value, " ");
+            count = st.countTokens();
+            if (description.equals("initUcell") && count > 1) {
+                if (count == 2) {
+                    while (st.hasMoreTokens()) {
+                        x = st.nextToken();
+                        y = st.nextToken();
+                    }
+                    System.out.print("initUcell = " + x + " " + y);
+                    System.out.println("\tEvery thing is OK! Token = 2");
+                    continue;
                 }
-                System.out.print("initUcell = " + x + " " + y + " " + " " + z);
-                System.out.println(" Every thing is OK!");
+                else if (count == 3) {
+                    while (st.hasMoreTokens()) {
+                        x = st.nextToken();
+                        y = st.nextToken();
+                        z = st.nextToken();
+                    }
+                    System.out.print("initUcell = " + x + " " + y + " " + z);
+                    System.out.println("\tEvery thing is OK! Token = 3");
+                    continue;
+                }
+                else
+                    System.out.println("Too many data!");
+
             } else
                 System.out.println(description + " " + value);
+            continue;
         }
         in.close();
     }
