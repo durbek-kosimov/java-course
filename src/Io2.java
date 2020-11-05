@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.IllegalFormatException;
 import java.util.InputMismatchException;
 import java.util.StringTokenizer;
 
@@ -32,12 +33,9 @@ public class Io2 {
                     description = stLine.nextToken();
                     if (description.equals("initUcell"))
                         throw new InputMismatchException("Few data! In line " + countLine);
-//                    while (stLine.hasMoreTokens()) {
                     value = stLine.nextToken();
                     if (value.contains("."))
                         flag = 1;
-
-//                    }
                     break;
                 case 3:
                     description = stLine.nextToken();
@@ -46,6 +44,8 @@ public class Io2 {
                             x = stLine.nextToken();
                             y = stLine.nextToken();
                         }
+                        if (x.contains(".") || y.contains("."))
+                            throw new InputMismatchException("Parameters of initUcell must be integers!");
                     }
                     else
                         throw new InputMismatchException("Too many data! In line " + countLine);
@@ -58,6 +58,8 @@ public class Io2 {
                             y = stLine.nextToken();
                             z = stLine.nextToken();
                         }
+                        if (x.contains(".") || y.contains(".") || z.contains("."))
+                            throw new InputMismatchException("Parameters of initUcell must be integers!");
                     }
                     else
                         throw new InputMismatchException("Too many data! In line " + countLine);
