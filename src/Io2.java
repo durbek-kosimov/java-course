@@ -2,6 +2,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.InputMismatchException;
 import java.util.StringTokenizer;
 
 public class Io2 {
@@ -10,7 +11,6 @@ public class Io2 {
         BufferedReader in = new BufferedReader(new FileReader(pr));
         Double deltaT, density, temperature;
         Integer stepAvg, stepEquil, stepInitlzTemp, stepLimit;
-
         String line;
         String value = null;
         String description = null;
@@ -23,12 +23,11 @@ public class Io2 {
             countToken = stLine.countTokens();
             switch (countToken) {
                 case 1:
-                    System.out.println("Incopatible data!!! In line " + countLine);
-                    break;
+                    throw new InputMismatchException("Incopatible data!!! In line " + countLine);
                 case 2:
                     description = stLine.nextToken();
                     if (description.equals("initUcell"))
-                        System.out.println("Few data! In line " + countLine);
+                        throw new InputMismatchException("Few data! In line " + countLine);
                     while (stLine.hasMoreTokens()) {
                         value = stLine.nextToken();
                     }
@@ -40,11 +39,10 @@ public class Io2 {
                             x = stLine.nextToken();
                             y = stLine.nextToken();
                         }
-
                     }
                     else
-                        System.out.println("Too many data! In line " + countLine);
-                        break;
+                        throw new InputMismatchException("Too many data! In line " + countLine);
+                    break;
                 case 4:
                     description = stLine.nextToken();
                     if (description.equals("initUcell")) {
@@ -55,11 +53,10 @@ public class Io2 {
                         }
                     }
                     else
-                        System.out.println("Too many data! In line " + countLine);
+                        throw new InputMismatchException("Too many data! In line " + countLine);
                     break;
                 case 5:
-                    System.out.println("Too many data!!! In line " + countLine);
-                    break;
+                    throw new InputMismatchException("Too many data! In line " + countLine);
             }
             if (countToken == 2)
                 System.out.println(description + " " + value);
