@@ -15,6 +15,7 @@ public class Io2 {
         Integer stepAvg, stepEquil, stepInitlzTemp, stepLimit;
         ArrayList<Double> param = new ArrayList<Double>();
         ArrayList<Integer> steps = new ArrayList<Integer>();
+        ArrayList<String> descriptionName = new ArrayList<String>();
         String line;
         String value = null;
         String description = null;
@@ -34,8 +35,12 @@ public class Io2 {
                     if (description.equals("initUcell"))
                         throw new InputMismatchException("Few data! In line " + countLine);
                     value = stLine.nextToken();
-                    if (value.contains("."))
+                    if (value.contains(".")) {
                         flag = 1;
+                        descriptionName.add(description);
+                    }
+                    else
+                        descriptionName.add(description);
                     break;
                 case 3:
                     description = stLine.nextToken();
@@ -46,6 +51,7 @@ public class Io2 {
                         }
                         if (x.contains(".") || y.contains("."))
                             throw new InputMismatchException("Parameters of initUcell must be integers!");
+                        descriptionName.add(description);
                     }
                     else
                         throw new InputMismatchException("Too many data! In line " + countLine);
@@ -60,6 +66,7 @@ public class Io2 {
                         }
                         if (x.contains(".") || y.contains(".") || z.contains("."))
                             throw new InputMismatchException("Parameters of initUcell must be integers!");
+                        descriptionName.add(description);
                     }
                     else
                         throw new InputMismatchException("Too many data! In line " + countLine);
@@ -82,6 +89,11 @@ public class Io2 {
             flag = 0;
         }
         in.close();
+        for (int i = 0; i < descriptionName.size(); i ++) {
+            if (descriptionName.get(i).equals("deltaT"))
+                deltaT = param.get(i);
+            System.out.println(descriptionName.get(i));
+        }
 
     }
 }
