@@ -21,6 +21,11 @@ public class Stove {
             time += 60;
             System.out.println("One minute is added.");
         }
-
+        else {
+            currentPower = power.on;
+            currentLamp = lamp.on;
+            time = 60;
+            System.out.println("Cooking started.");
+        }
     }
 }
