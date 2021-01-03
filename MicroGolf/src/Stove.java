@@ -14,7 +14,7 @@ public class Stove {
         this.currentPower = power.off;
     }
 
-    private void takeButton() {
+    public void takeButton() {
         if (currentDoor == door.open)
             System.out.println("Pressing the button when the door is open is meaningless.");
         else if (currentPower == power.on) {
@@ -26,6 +26,23 @@ public class Stove {
             currentLamp = lamp.on;
             time = 60;
             System.out.println("Cooking started.");
+        }
+    }
+    public void takeDoor() {
+        if (currentDoor == door.open) {
+            currentDoor = door.close;
+            currentLamp = lamp.off;
+            System.out.println("Door is closed.");
+        }
+        else {
+            currentDoor = door.open;
+            currentLamp = lamp.on;
+            time = -1;
+            System.out.println("Door is open");
+            if (currentPower == power.on) {
+                System.out.println("Cooking interrupted.");
+                currentPower = power.off;
+            }
         }
     }
 }
