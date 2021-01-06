@@ -45,4 +45,10 @@ public class Stove {
             }
         }
     }
+    public void foddReady() {
+        currentPower = power.off;
+        currentLamp = lamp.on;
+        time = -1;
+        System.out.println("Food is ready!");
+    }
 }
