@@ -51,4 +51,10 @@ public class Stove {
         time = -1;
         System.out.println("Food is ready!");
     }
+    public void run() {
+        int i;
+        enum Keys {
+            b(98), d(100), Escape(27)
+        }
+    }
 }
