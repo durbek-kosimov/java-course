@@ -53,8 +53,12 @@ public class Stove {
     }
     public void run() {
         int i;
-        enum Keys {
-            b(98), d(100), Escape(27)
+//        private static void instantiateEnum() {
+//            ErrorCodes businessError = ErrorCodes.BUSINESS_ERROR;
+//            System.out.println(businessError);
+//        }
+        while (true) {
+            while ()
         }
     }
 }
