@@ -23,5 +23,16 @@ public class Main {
 		System.out.println(ch);
 		System.out.println(uch);
 		System.out.println(cch);
+
+		double twenty = 20.00;
+		double eighty = 80.00;
+		double number3 = (twenty + eighty) * 100.00;
+		double res = number3 % 40;
+		boolean bool = res == 0 ? true : false;
+		System.out.println("Boolean is " + bool);
+		if (!bool) {
+			System.out.println("Got some remainder!");
+		}
+
 	}
 }
