@@ -3,36 +3,64 @@ package com;
 public class Main {
 
     public static void main(String[] args) {
-		byte b = 100;
-		short sh = 200;
-		int i = 40000;
-		long l = 50000 + (b + sh + i) * 10;
-        System.out.println(l);
-        short shTotal = (short) (1000 + 10 * (b + sh + i));
-		System.out.println(shTotal);
-		float f = 5.25f;
+        boolean gameOver = true;
+        int score = 800;
+        int levelCompleted = 5;
+        int bonus = 100;
+//        String name = "Dris";
+        int position = 0;
 
-		double convert = 0.45359237;
-		double pd = 200;
-		double kg = pd * convert;
-		System.out.println(kg);
+        calculateScore(gameOver, score, levelCompleted, bonus);
+        position = calculateHighScorePosition(score);
+        displayHighscorePosition("Dris", position);
 
-		char ch = 'D';
-		char uch = '\u0044';
-		char cch = '\u00A9';
-		System.out.println(ch);
-		System.out.println(uch);
-		System.out.println(cch);
+        score = 10000;
+        levelCompleted = 8;
+        bonus = 200;
 
-		double twenty = 20.00;
-		double eighty = 80.00;
-		double number3 = (twenty + eighty) * 100.00;
-		double res = number3 % 40;
-		boolean bool = res == 0 ? true : false;
-		System.out.println("Boolean is " + bool);
-		if (!bool) {
-			System.out.println("Got some remainder!");
-		}
+        calculateScore(gameOver, score, levelCompleted, bonus);
+        position = calculateHighScorePosition(score);
+        displayHighscorePosition("Mertens", position);
+    }
 
-	}
+    public static void displayHighscorePosition(String name, int position) {
+        System.out.println(name + " managed to get into position " + position + " on the high score table.");
+    }
+    public static int calculateHighScorePosition(int score) {
+        if (score >= 1000)
+            return 1;
+        else if (score >= 500 && score < 1000)
+            return 2;
+        else if (score >= 100 && score < 500)
+            return 3;
+        else
+            return 4;
+
+//        if (score >= 1000)
+//            return 1;
+//        else if (score >= 500)
+//            return 2;
+//        else if (score >= 100)
+//            return 3;
+//        else
+//            return 4;
+//
+//        int position = 4;
+//        if (score >= 1000)
+//            position = 1;
+//        else if (score >= 500)
+//            position = 2;
+//        else if (score >= 100)
+//            position = 3;
+//        return 4;
+    }
+    public static int calculateScore(boolean gameOver,int score, int levelCompleted, int bonus) {
+        if(gameOver) {
+            int finalScore = score + (levelCompleted * bonus);
+            finalScore += 2000;
+            System.out.println("Your final score was " + finalScore);
+            return finalScore;
+        }
+        return -1;
+    }
 }
